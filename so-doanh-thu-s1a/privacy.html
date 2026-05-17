@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html dir="auto" lang="vi" >
+<head>
+	<meta charset="UTF-8" />
+	<title>Privacy - Sổ Doanh Thu S1A</title>
+
+	<meta name="description" content="Ghi chép doanh thu nhanh chóng, quản lý thu nhập &amp; xuất báo cáo PDF chuẩn S1A." />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="content/image/g047qe51qdn5hc5dw73r.ico" />
+
+	<meta property="og:title" content="Privacy - Sổ Doanh Thu S1A" />
+	<meta property="og:description" content="Ghi chép doanh thu nhanh chóng, quản lý thu nhập &amp; xuất báo cáo PDF chuẩn S1A." />
+	<meta property="og:image" content="content/image/wkjctaqxz7otjsyg53h.jfif" />
+	<meta name="robots" content="index,nofollow" />
+	<style>
+		:root {
+		  --font-xl: 42px;
+		  --font-lg: 24px;
+		  --font-md: 20px;
+		  --font-sm: 18px;
+		  --font-xs: 16px;
+		  --font-xxs: 14px;
+		
+		  --screenshot-width: 300px;
+		  --screenshot-height: 500px;
+		  /* Light */
+		  --background-light: #ffffff;
+		  --background-image-light: url(assets/light-background.svg);
+		  --text-light: #222222;
+		  --text-color-footer-light: #8a8a8a;
+		  --text-color-link-hover-light: #454545;
+		  
+		  /* Dark */
+		  --background-dark: #121212;
+		  --background-image-dark: url(assets/dark-background.svg);
+		  --text-dark: #8a8a8a;
+		  --text-color-footer-dark: #8a8a8a;
+		  --text-color-link-hover-dark: #454545;
+		}
+		@media (max-width: 768px) {
+		  :root {
+		    --font-xl: 18px;
+		    --font-lg: 16px;
+		    --font-md: 14px;
+		    --font-sm: 12px;
+		    --font-xs: 12px;
+		    --font-xxs: 12px;
+		
+		    --screenshot-width: 250px;
+		    --screenshot-height: 300px;
+		  }
+		}
+		
+		/* Default */
+		html {
+		  --background-color: var(--background-light);
+		  --text-color: var(--text-light);
+		  --background-image: var(--background-image-light);
+		  --contrast-background-color: var(--background-dark);
+		  --text-color-footer: var(--text-color-footer-light);
+		  --text-color-link-hover: var(--text-color-link-hover-light)
+		}
+		/* Dark */
+		html.theme-dark {
+		  --background-color: var(--background-dark);
+		  --text-color: var(--text-dark);
+		  --background-image: var(--background-image-dark);
+		  --contrast-background-color: var(--background-light);
+		  --text-color-footer: var(--text-color-footer-dark);
+		  --text-color-link-hover: var(--text-color-link-hover-dark)  
+		}
+		
+		body {
+		  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		  color: var(--text-color);
+		  display: flex;
+		  min-height: 100vh;
+		  flex-direction: column;
+		  font-size: var(--font-md);
+		  background-color: var(--background-color);
+		  background-image: var(--background-image);
+		  background-size: cover;
+		  background-position-x: 20vw;
+		  background-position-y: -10vh;
+		  background-repeat: no-repeat;
+		  line-height: 1.4;
+		}
+		
+		main {
+		  flex: 1;
+		  width: 100%;
+		}
+		
+		a {
+		  color: var(--text-color-footer);
+		  /*color: #65638f;*/
+		  text-decoration: none;
+		}
+		a:hover {
+		  color: var(--text-color-link-hover);
+		}
+		
+		.button {
+		  display: flex;
+		  background: linear-gradient(65deg, #DA552F, #ea8e39);
+		  font-family: "Heebo", sans-serif;
+		  color: #fff;
+		  display: inline-flex;
+		  font-size: var(--font-xxs);
+		  letter-spacing: 0px;
+		  font-weight: 700;
+		  line-height: 16px;
+		  text-transform: uppercase;
+		  text-decoration: none !important;
+		  border: none;
+		  border-radius: 2px;
+		  cursor: pointer;
+		  justify-content: center;
+		  padding: 16px 32px;
+		  text-align: center;
+		  white-space: nowrap;
+		  box-shadow: 0 8px 24px rgba(32, 43, 54, 0.12);
+		  mix-blend-mode: multiply;
+		  transition: all 0.15s ease;
+		}
+		.button:hover {
+		  color: #fff;
+		  box-shadow: 0 8px 24px rgba(32, 43, 54, 0.25);
+		}
+		.button--link {
+		  background: rgba(0, 0, 0, 0);
+		  color: #5A51FE;
+		  box-shadow: none;
+		}
+		.button--link:hover {
+		  color: #8751FE;
+		  box-shadow: none;
+		}
+		
+		.accent {
+		  color: #5A51FE;
+		}
+		
+		.container {
+		  max-width: 960px;
+		  padding: 0 30px;
+		  margin: auto;
+		}
+		
+		h1, h2 {
+		  font-family: "Heebo", sans-serif;
+		}
+		
+		.container-desktop {
+		  max-width: 960px;
+		  padding: 0 30px;
+		  margin: auto;
+		}
+		@media (max-width: 768px) {
+		  .container-desktop {
+		    max-width: 100%;
+		    padding: 0;
+		  }
+		}
+		
+		.tobi-zoom__icon {
+		  display: none;
+		}
+		
+		.app__header {
+		  display: flex;
+		  flex-direction: row;
+		  margin-top: 128px;
+		  margin-bottom: 128px;
+		  align-items: center;
+		}
+		@media (max-width: 768px) {
+		  .app__header {
+		    align-items: flex-start;
+		    margin-top: 32px;
+		    margin-bottom: 16px;
+		  }
+		}
+		.app__logo-wrapper {
+		  display: inline-block;
+		  background-size: contain;
+		  max-width: 250px;
+		  max-height: 250px;
+		  padding: 1px;
+		  margin-right: 64px;
+		  width: 100%;
+		  height: 100%;
+		  background-repeat: no-repeat;
+		}
+		html[dir=rtl] .app__logo-wrapper {
+		  margin-left: 64px;
+		  margin-right: 0;
+		}
+		@media (max-width: 768px) {
+		  .app__logo-wrapper {
+		    max-width: 100px;
+		    max-height: 100px;
+		    margin-right: 16px;
+		  }
+		}
+		.app__logo {
+		  border-radius: 22.5%;
+		  mask-size: cover;
+		  width: 100%;
+		  height: auto;
+		}
+		.app__name {
+		  font-size: var(--font-xl);
+		  margin: 0;
+		}
+		.app__description {
+		  font-size: var(--font-lg);
+		}
+		@media (max-width: 768px) {
+		  .app__description {
+		    margin-top: 8px;
+		    margin-bottom: 0;
+		  }
+		}
+		.app__screenshot-a{
+		  text-align:center;
+		}
+		.app__screenshots-list {
+		  display: grid;
+		  grid-template-columns: repeat(6, var(--screenshot-width));
+		  grid-column-gap: 15px;
+		  padding: 30px 0;
+		  
+		}
+		@media (max-width: 768px) {
+		  .app__screenshots-list {
+		    padding: 32px;
+		  }
+		}
+		.app__screenshot {
+		  max-width:var(--screenshot-width);
+		  height:var(--screenshot-height);
+		  object-fit:contain;
+		  border-radius: 16px;
+		  /*box-shadow: 0 12px 48px rgba(17, 16, 62, 0.12);*/
+		  transition: all 0.3s ease-in-out;
+		  transform: scale(1);
+		  cursor: pointer;
+		}
+		.app__screenshot:hover {
+		  /*box-shadow: 0 24px 48px rgba(17, 16, 62, 0.12);*/
+		  transform: scale(1.05);
+		}
+		.app__screenshots-wrapper {
+		  overflow-y: auto;
+		}
+		.app__feature-container {
+		margin:auto;
+		}
+		.app__feature-wrapper{
+		  display: flex;
+		  justify-content: center;
+		  width: 100%;
+		}
+		.app__feature {
+		  width: 40%;
+		  border-radius: 16px;
+		  transition: all 0.3s ease-in-out;
+		  transform: scale(1);
+		}
+		@media (max-width: 768px) {
+		  .app__feature {
+		    width: 80%;
+		  }
+		}
+		
+		.app__buttons {
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  margin-left: -9.8px;
+		}
+		.app__buttons--mobile {
+		  display: none;
+		}
+		@media (max-width: 768px) {
+		  .app__buttons {
+		    margin-left: 0;
+		    margin-bottom: 64px;
+		  }
+		  .app__buttons--mobile {
+		    display: flex;
+		    justify-content: center;
+		  }
+		  .app__buttons--desktop {
+		    display: none;
+		  }
+		}
+		.app__button-play img {
+		  width: 176.4px;
+		}
+		.app__button-ios img {
+		  width: 140px;
+		}
+		.app__button-web {
+		  margin-left: 12px;
+		}
+		.app__button-web img {
+		  width: 157px;
+		}
+		@media (max-width: 768px) {
+		  .app__button-play img {
+		    width: 126px;
+		  }
+		  .app__button-ios img {
+		    width: 100px;
+		  }
+		  .app__button-web {
+		    margin-left: 8px;
+		  }
+		  .app__button-web img {
+		    width: 112px;
+		  }
+		}
+		.app__section-title {
+		  font-size: var(--font-lg);
+		}
+		.app__section {
+		  margin-bottom: 128px;
+		}
+		@media (max-width: 768px) {
+		  .app__section {
+		    margin-bottom: 64px;
+		  }
+		}
+		.app__featured-content {
+		  display: grid;
+		  grid-template-columns: 1fr 1fr 1fr 1fr;
+		  grid-column-gap: 32px;
+		  align-items: center;
+		}
+		@media (max-width: 768px) {
+		  .app__featured-content {
+		    display: block;
+		    padding: 32px;
+		  }
+		}
+		.app__featured-image {
+		  width: 100%;
+		  margin: auto;
+		}
+		
+		.footer {
+		  padding: 16px 0;
+		  font-size: var(--font-xs) !important;
+		}
+		.footer a {
+		  font-size: var(--font-xs) !important;
+		}
+		.footer__container {
+		  color: var(--text-color-footer);
+		  display: flex;
+		  width: 100%;
+		  justify-content: space-between;
+		  align-items: center;
+		}
+		@media (max-width: 768px) {
+		  .footer__container {
+		    flex-direction: column-reverse;
+		    align-items: flex-start;
+		  }
+		}
+		.footer__links {
+		  list-style: none;
+		  display: flex;
+		  padding-left: 0;
+		}
+		.footer__link {
+		  margin-left: 32px;
+		}
+		@media (max-width: 768px) {
+		  .footer__link {
+		    margin-left: 0;
+		    margin-right: 8px;
+		  }
+		}
+		
+		.page {
+		  max-width: 960px;
+		  padding: 0 30px;
+		  margin: auto;
+		}
+		
+		.bulb {
+		  font-size: 1.5rem;
+		  background-color: rgba(0, 0, 0, 0.7);
+		  border-radius: 0.75em;
+		  /* box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset; */
+		  color: #fdea7b;
+		  display: inline-flex;
+		  align-items: center;
+		  margin: auto;
+		  padding: 0.15em;
+		  width: 3em;
+		  height: 1.5em;
+		  transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
+		  -webkit-appearance: none;
+		  -moz-appearance: none;
+		  appearance: none;
+		  z-index: 99;
+		  position:fixed;
+		  top: 2rem;
+		  right: 1rem;
+		}
+		
+		.bulb::before, .bulb:after {
+		  box-sizing: border-box;
+		  content: "";
+		  display: block;
+		}
+		
+		.bulb::before {
+		  background-color: #d7d7d7;
+		  border-radius: 50%;
+		  width: 1.2em;
+		  height: 1.2em;
+		  transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+		  z-index: 100;
+		}
+		
+		.bulb::after {
+		  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% / 50% 100%, repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%) 0 50% / 50% 100%, radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
+		  background-repeat: no-repeat;
+		  border: 0.25em solid transparent;
+		  border-left: 0.4em solid #d8d8d8;
+		  border-right: 0 solid transparent;
+		  transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+		  transform: translateX(-22.5%);
+		  transform-origin: 25% 50%;
+		  width: 1.2em;
+		  height: 1em;
+		}
+		
+		/* Checked */
+		.bulb:checked {
+		  background-color: rgba(0, 0, 0, 0.45);
+		  /* box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset; */
+		}
+		
+		.bulb:checked::before {
+		  background-color: currentColor;
+		  transform: translateX(125%)
+		}
+		
+		.bulb:checked::after {
+		  border-left-color: currentColor;
+		  transform: translateX(-2.5%) rotateY(180deg);
+		}	</style>
+	<link rel="stylesheet" href="assets/tobi.css" />
+</head>
+	<body>
+		<main>
+			<input class="bulb" id="toggle-theme" type="checkbox" readOnly checked/>
+<article class="page">
+	<header class="page__header">
+		<h1 class="page__title">Privacy</h1>
+	</header>
+	<div class="page__content">
+		<h1 id="chính-sách-bảo-mật-privacy-policy---sổ-doanh-thu-s1a">CHÍNH SÁCH BẢO MẬT (PRIVACY POLICY) - SỔ DOANH THU S1A</h1>
+<p><em>Cập nhật lần cuối: Ngày 17 tháng 05 năm 2026</em></p>
+<p>Chào mừng bạn đến với ứng dụng <strong>Sổ Doanh Thu S1A</strong> (sau đây gọi tắt là &quot;Ứng dụng&quot;). Chúng tôi cam kết bảo vệ quyền riêng tư và thông tin cá nhân của bạn. Chính sách bảo mật này giải thích cách Ứng dụng xử lý dữ liệu của bạn khi bạn sử dụng dịch vụ của chúng tôi.</p>
+<hr>
+<h2 id="🇻🇳-chính-sách-bảo-mật-vietnamese">🇻🇳 CHÍNH SÁCH BẢO MẬT (VIETNAMESE)</h2>
+<h3 id="1-thu-thập-và-sử-dụng-thông-tin">1. Thu Thập và Sử Dụng Thông Tin</h3>
+<ul>
+<li><strong>Dữ liệu kinh doanh &amp; giao dịch:</strong> Mọi thông tin bạn nhập vào Ứng dụng bao gồm: các giao dịch doanh thu, thông tin hộ kinh doanh (tên, mã số thuế, địa chỉ, địa điểm kinh doanh), mẫu nhập nhanh... đều được <strong>lưu trữ cục bộ ngay trên thiết bị của bạn</strong> (thông qua bộ nhớ đệm an toàn). Chúng tôi <strong>KHÔNG</strong> thu thập, KHÔNG lưu trữ dữ liệu tài chính hay thông tin doanh thu của bạn trên bất kỳ máy chủ bên ngoài nào.</li>
+<li><strong>Quyền kiểm soát dữ liệu:</strong> Bạn hoàn toàn kiểm soát dữ liệu của mình. Bạn có thể xóa toàn bộ dữ liệu này bất cứ lúc nào bằng cách xóa dữ liệu ứng dụng trong phần cài đặt thiết bị hoặc gỡ bỏ ứng dụng.</li>
+</ul>
+<h3 id="2-dịch-vụ-của-bên-thứ-ba">2. Dịch Vụ Của Bên Thứ Ba</h3>
+<p>Để tối ưu hóa trải nghiệm và vận hành ứng dụng, chúng tôi có tích hợp một số dịch vụ của bên thứ ba. Các dịch vụ này có thể thu thập thông tin ẩn danh theo chính sách riêng của họ:</p>
+<ul>
+<li><strong>Google AdMob (Quảng cáo):</strong> Dùng để hiển thị quảng cáo trong phiên bản miễn phí. Google AdMob có thể sử dụng mã nhận dạng quảng cáo của thiết bị (Ad ID) để cá nhân hóa quảng cáo. Bạn có thể tắt tính năng này trong cài đặt thiết bị iOS/Android của mình.</li>
+<li><strong>RevenueCat (Quản lý thanh toán):</strong> Được sử dụng để quản lý trạng thái nâng cấp phiên bản Premium của bạn. Dữ liệu mua hàng được xử lý ẩn danh qua mã biên lai giao dịch của Apple App Store hoặc Google Play Store.</li>
+</ul>
+<h3 id="3-quyền-truy-cập-thiết-bị-device-permissions">3. Quyền Truy Cập Thiết Bị (Device Permissions)</h3>
+<p>Ứng dụng có thể yêu cầu một số quyền truy cập cơ bản trên thiết bị của bạn:</p>
+<ul>
+<li><strong>Quyền truy cập mạng (Internet):</strong> Cần thiết để tải quảng cáo (AdMob) và kiểm tra trạng thái mua hàng Premium (RevenueCat).</li>
+<li><strong>Quyền Lưu trữ / Thư viện (Storage/Files):</strong> Cần thiết khi bạn thực hiện thao tác xuất báo cáo doanh thu ra file PDF hoặc lưu trữ/chia sẻ tài liệu.</li>
+</ul>
+<h3 id="4-bảo-mật-dữ-liệu">4. Bảo Mật Dữ Liệu</h3>
+<p>Vì toàn bộ dữ liệu giao dịch được lưu tại bộ nhớ cục bộ của thiết bị, tính bảo mật dữ liệu phụ thuộc vào mức độ bảo mật thiết bị cá nhân của bạn. Chúng tôi khuyến nghị bạn cài đặt mật khẩu hoặc các phương thức khóa màn hình an toàn để tránh việc người khác truy cập trái phép vào dữ liệu trên máy của bạn.</p>
+<hr>
+<h2 id="🇬🇧-privacy-policy-english">🇬🇧 PRIVACY POLICY (ENGLISH)</h2>
+<h3 id="1-information-collection-and-use">1. Information Collection and Use</h3>
+<ul>
+<li><strong>Business &amp; Transaction Data:</strong> All information you input into the Application, including revenue transactions, business profiles (name, tax code, address, location), and templates, is <strong>stored locally on your device</strong> (via secure local storage). We <strong>DO NOT</strong> collect, store, or transmit your financial or business data to any external servers.</li>
+<li><strong>Data Control:</strong> You have full control over your data. You can delete all recorded data at any time by clearing the application cache in your device settings or by uninstalling the application.</li>
+</ul>
+<h3 id="2-third-party-services">2. Third-Party Services</h3>
+<p>To optimize your experience and support app monetization, we integrate third-party services that may collect anonymous device information based on their respective privacy policies:</p>
+<ul>
+<li><strong>Google AdMob (Advertising):</strong> Used to display ads in the free version. Google AdMob may use device advertising identifiers (Ad ID) to personalize advertisements. You can opt-out of personalized ads in your iOS/Android device settings.</li>
+<li><strong>RevenueCat (In-App Purchases):</strong> Used to manage your Premium subscription status. Purchase data is processed anonymously using Apple App Store or Google Play Store receipt validations.</li>
+</ul>
+<h3 id="3-device-permissions">3. Device Permissions</h3>
+<p>The Application may request the following basic permissions:</p>
+<ul>
+<li><strong>Network Access (Internet):</strong> Required to load advertisements (AdMob) and validate Premium subscriptions (RevenueCat).</li>
+<li><strong>Storage/Files Access:</strong> Required to export and save your revenue reports as PDF files onto your device.</li>
+</ul>
+<h3 id="4-data-security">4. Data Security</h3>
+<p>Since all transaction logs are kept exclusively in local storage on your device, the security of your data depends directly on your device&#39;s physical and digital security. We highly recommend using lock screens, passwords, or biometrics to prevent unauthorized physical access to your device.</p>
+<hr>
+<h2 id="5-liên-hệ-với-chúng-tôi-contact-us">5. Liên Hệ Với Chúng Tôi (Contact Us)</h2>
+<p>Nếu bạn có bất kỳ câu hỏi nào về chính sách bảo mật này, xin vui lòng liên hệ:</p>
+<ul>
+<li><strong>Email:</strong> [<a href="mailto:&#x73;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#64;&#x62;&#x69;&#x6e;&#104;&#x6d;&#109;&#111;&#46;&#x63;&#x6f;&#x6d;">&#x73;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#64;&#x62;&#x69;&#x6e;&#104;&#x6d;&#109;&#111;&#46;&#x63;&#x6f;&#x6d;</a>]</li>
+<li><strong>Website:</strong> [binhmmo.com]</li>
+</ul>
+
+	</div>
+</article>
+
+
+
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__container">
+					<p class="footer__love">
+						<script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
+					</p>
+					<ul class="footer__links">
+							<li class="footer__link">
+								<a href="contact.html">Contact</a>
+							</li>
+							<li class="footer__link">
+								<a href="privacy.html">Privacy</a>
+							</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="assets/tobi.min.js" /></script>
+		<script>
+			window.onload = function () {
+				var tobi = new Tobi();
+			};
+		</script>
+		<script>
+			window.onload = function () {
+					document.querySelector('#toggle-theme').addEventListener('change', (event) => {
+						if(event.target.checked){
+							document.getElementsByTagName("html")[0].className = "";
+						}else{
+							document.getElementsByTagName("html")[0].className = "theme-dark";
+						}
+						
+					});
+			};
+		</script>
+  </body>
+</html>
