@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdShield - Secure DNS Ad Blocker</title>
+  <meta name="description" content="Block intrusive ads, trackers, and adult content securely. Fast and private browsing using a secure local DNS-over-VPN connection.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="app_icon.png">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="app_icon.png" alt="AdShield Logo">
+          <span>AdShield</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+        <a href="#download" class="btn-nav-download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1>Surf Securely. <br>Block Ads. <br>Filter Content.</h1>
+          <p>AdShield protects your device from intrusive ads, malicious trackers, and explicit content. Using a secure local VPN connection, your data is filtered right on your device for absolute privacy.</p>
+          <div class="download-badges" id="download">
+            <!-- App Store Badge -->
+            <a href="#" class="badge-btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,22C14.32,22.05 13.89,21.24 12.37,21.24C10.84,21.24 10.37,21.97 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.1,16.67C20.08,16.74 19.67,18.11 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.39C14.39,5.47 15.4,4.88 15.97,4.17Z"/>
+              </svg>
+              <div class="badge-text">
+                <span>Download on the</span>
+                <span>App Store</span>
+              </div>
+            </a>
+            <!-- Google Play Badge -->
+            <a href="#" class="badge-btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M3,5.27V18.73L16.55,12L3,5.27M17.87,11.33L19.5,12.16L17.87,13L3,20.73V21.41C3,21.74 3.26,22 3.59,22M3.59,2C3.26,2 3,2.26 3,2.59V3.27L17.87,11L19.5,11.84L17.87,12.67M20.66,11.59C20.88,11.72 21,11.96 21,12.18C21,12.4 20.88,12.64 20.66,12.77L19.5,13.35L17.87,12.5L19.5,11.66L20.66,11.59Z"/>
+              </svg>
+              <div class="badge-text">
+                <span>Get it on</span>
+                <span>Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="phone-container">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="mock-header">
+                <h4>AdShield</h4>
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.47,5.34 14.86,5.08L14.48,2.42C14.44,2.18 14.24,2 14,2H10C9.76,2 9.56,2.18 9.52,2.42L9.14,5.08C8.53,5.34 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.95C7.96,18.34 8.53,18.66 9.14,18.92L9.52,21.58C9.56,21.82 9.76,22 10,22H14C14.24,22 14.44,21.82 14.48,21.58L14.86,18.92C15.47,18.66 16.04,18.34 16.56,17.95L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/></svg>
+              </div>
+              <div class="mock-vpn-btn-wrapper">
+                <button class="mock-vpn-btn">
+                  <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                  <span>ON</span>
+                </button>
+                <div class="mock-vpn-status">Device Protected</div>
+              </div>
+              <div class="mock-stats">
+                <div class="mock-stat-card">
+                  <div class="stat-title">Blocked</div>
+                  <div class="stat-val">1,249</div>
+                </div>
+                <div class="mock-stat-card">
+                  <div class="stat-title">Total DNS</div>
+                  <div class="stat-val">4,812</div>
+                </div>
+              </div>
+              <div class="mock-filter-card">
+                <div class="mock-filter-row">
+                  <div class="mock-filter-info">
+                    <strong>Block Ads</strong>
+                  </div>
+                  <div class="mock-filter-badge">Always On</div>
+                </div>
+                <div class="mock-filter-row">
+                  <div class="mock-filter-info">
+                    <strong>Adult Filter</strong>
+                  </div>
+                  <div class="mock-toggle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Complete Protection</h2>
+        <p>A simpler, faster, and safer web experience is just one tap away.</p>
+      </div>
+      <div class="features-grid">
+        <!-- AdBlock -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper icon-blue">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+          </div>
+          <h3>Advanced Ad Blocking</h3>
+          <p>Filters banner ads, video promotions, tracking domains, and annoying popups using the curated Hagezi Ultimate lists.</p>
+        </div>
+        <!-- NSFW Filter -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper icon-red">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+          </div>
+          <h3>Adult Content Block</h3>
+          <p>Protects your children and yourself. Restricts explicit web content and NSFW domains easily with a toggle filter.</p>
+        </div>
+        <!-- Local VPN -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper icon-green">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          </div>
+          <h3>100% Local Processing</h3>
+          <p>AdShield processes all filters locally on your device via a local loopback VPN. No remote servers track your traffic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <a href="index.html" class="footer-logo">
+          <img src="app_icon.png" alt="AdShield Logo">
+          <span>AdShield</span>
+        </a>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+        <div class="copyright">&copy; 2026 AdShield. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
