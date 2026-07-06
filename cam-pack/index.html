@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CamPack - Packaging Video & Shipment Proof Recorder</title>
+  <meta name="description"
+    content="CamPack helps online sellers easily record packaging videos, automatically scan tracking codes, and manage storage space safely.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bg-gradient-glow"></div>
+  <div class="bg-gradient-glow-left"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">C</div>
+        Cam<span>Pack</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#features" data-i18n="nav_features">Features</a>
+        <a href="privacy.html" data-i18n="nav_privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="nav_terms">Terms of Service</a>
+      </nav>
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="vi">VI</button>
+        </div>
+        <button class="mobile-toggle" id="mobile-toggle">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-badge" data-i18n="hero_badge">📸 Professional Packaging Video Recorder</span>
+        <h1 data-i18n="hero_title">Record Shipping Packets <span>Effortlessly</span></h1>
+        <p data-i18n="hero_desc">CamPack helps online sellers easily record packaging videos, scan tracking codes
+          automatically, manage local storage space, and preserve proof of shipments safely to prevent order disputes.
+        </p>
+
+        <div class="store-buttons">
+          <!-- Google Play Store -->
+          <a href="#" class="store-btn" id="playstore-btn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.5,12L12,6.5V11H7V13H12V17.5L17.5,12Z" />
+            </svg>
+            <div class="store-btn-text">
+              <span data-i18n="store_google_play_sub">GET IT ON</span>
+              <span>Google Play</span>
+            </div>
+          </a>
+
+          <!-- Apple App Store -->
+          <a href="#" class="store-btn" id="appstore-btn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18.71,19.5C17.88,20.74 17,21.95 15.66,22C14.32,22.05 13.89,21.24 12.37,21.24C10.84,21.24 10.37,21.97 9.1,22.03C7.79,22.08 6.8,20.72 5.96,19.5C4.26,17 2.97,12.4 4.72,9.37C5.6,7.83 7.17,6.86 8.89,6.83C10.2,6.8 11.44,7.72 12.24,7.72C13.04,7.72 14.53,6.61 16.1,6.77C16.76,6.8 18.66,7.04 19.86,8.8C19.76,8.87 17.5,10.18 17.52,12.8C17.55,15.9 20.2,16.94 20.23,16.95C20.21,17 19.81,18.36 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.39C14.39,5.47 15.4,4.88 15.97,4.17Z" />
+            </svg>
+            <div class="store-btn-text">
+              <span data-i18n="store_app_store_sub">Download on the</span>
+              <span>App Store</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Interactive Mockup -->
+      <div class="hero-mockup">
+        <div class="mockup-wrapper">
+          <div class="mockup-screen">
+            <div class="mockup-header">
+              <span class="mockup-logo">CamPack</span>
+              <span style="font-size: 0.8rem; color: #10b981; font-weight: bold;">● LIVE</span>
+            </div>
+
+            <div class="mockup-camera-view">
+              <div class="mockup-scan-line"></div>
+              <span
+                style="font-size: 0.75rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-top: 2rem;">Auto-Scanning
+                QR...</span>
+              <span
+                style="font-size: 0.85rem; color: var(--primary); font-weight: bold; margin-top: 0.5rem; text-shadow: 0 0 10px rgba(255,179,0,0.5);">SPXVN04958102</span>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+              <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Recording in
+                progress...</span>
+              <div class="mockup-record-btn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="section-header">
+      <h2 data-i18n="features_title">App Features</h2>
+      <p data-i18n="features_desc">Designed specifically for e-commerce store owners and online merchants.</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <div class="feature-icon">📹</div>
+        <h3 data-i18n="feat_1_title">Video Recording</h3>
+        <p data-i18n="feat_1_desc">Capture clear video footage of your packaging process with high quality, ensuring
+          every item detail is visible.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3 data-i18n="feat_2_title">Auto QR & Barcode Scan</h3>
+        <p data-i18n="feat_2_desc">Point the camera at the tracking label to automatically parse the order code. Easily
+          search videos by barcode later.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <div class="feature-icon">🗑️</div>
+        <h3 data-i18n="feat_3_title">Clean Up Storage</h3>
+        <p data-i18n="feat_3_desc">Free up device space in bulk. Automatically clear older package videos while keeping
+          your bookmarked archives safe.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3 data-i18n="feat_4_title">Safe Archive</h3>
+        <p data-i18n="feat_4_desc">Bookmark important videos to protect them from automated clean-ups. Keep your
+          shipment proof safe as long as needed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="cta-box">
+      <h2 data-i18n="cta_title">Ready to secure your shipments?</h2>
+      <p data-i18n="cta_desc">Download CamPack today and start recording every order package with ease.</p>
+
+      <div class="store-buttons">
+        <a href="#" class="store-btn">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.5,12L12,6.5V11H7V13H12V17.5L17.5,12Z" />
+          </svg>
+          <div class="store-btn-text">
+            <span data-i18n="store_google_play_sub">GET IT ON</span>
+            <span>Google Play</span>
+          </div>
+        </a>
+        <a href="#" class="store-btn">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M18.71,19.5C17.88,20.74 17,21.95 15.66,22C14.32,22.05 13.89,21.24 12.37,21.24C10.84,21.24 10.37,21.97 9.1,22.03C7.79,22.08 6.8,20.72 5.96,19.5C4.26,17 2.97,12.4 4.72,9.37C5.6,7.83 7.17,6.86 8.89,6.83C10.2,6.8 11.44,7.72 12.24,7.72C13.04,7.72 14.53,6.61 16.1,6.77C16.76,6.8 18.66,7.04 19.86,8.8C19.76,8.87 17.5,10.18 17.52,12.8C17.55,15.9 20.2,16.94 20.23,16.95C20.21,17 19.81,18.36 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.39C14.39,5.47 15.4,4.88 15.97,4.17Z" />
+          </svg>
+          <div class="store-btn-text">
+            <span data-i18n="store_app_store_sub">Download on the</span>
+            <span>App Store</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-info">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">C</div>
+            Cam<span>Pack</span>
+          </a>
+          <p data-i18n="footer_desc">CamPack - The ultimate packing video companion for smart online merchants.</p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div class="footer-column">
+            <h4>Application</h4>
+            <ul>
+              <li><a href="#features" data-i18n="nav_features">Features</a></li>
+              <li><a href="privacy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+              <li><a href="terms.html" data-i18n="nav_terms">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:support@binhmmo.com">support@binhmmo.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_copyright">© 2026 CamPack. All rights reserved.</p>
+        <p>Built with ❤️ for E-commerce Sellers</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
