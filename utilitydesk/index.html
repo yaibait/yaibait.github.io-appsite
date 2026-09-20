@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utility Desk - Precision Daily Toolkit & Private Secure Vault</title>
+  <meta name="description"
+    content="Utility Desk is an all-in-one digital toolkit featuring a smart calculator, screen ruler, spirit bubble level, protractor, and unit converter, coupled with an impenetrable 100% on-device secure vault for your photos, videos, and private notes.">
+  <meta name="keywords"
+    content="Utility Desk, Calculator, Screen Ruler, Bubble Level, Protractor, Unit Converter, Photo Vault, Video Locker, Private Notes, On-Device Privacy">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Utility Desk - Precision Daily Toolkit & Private Secure Vault">
+  <meta property="og:description"
+    content="A unified suite of everyday tools paired with an on-device personal vault for photos, videos, and notes.">
+  <meta property="og:image" content="assets/icons/vault.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icons/vault.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
+  </div>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="brand-icon-wrapper">
+          <img src="assets/icons/vault.png" alt="Utility Desk Logo">
+        </div>
+        <span>Utility Desk</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#features" class="active">Overview</a></li>
+          <li><a href="#toolkit">Tools Suite</a></li>
+          <li><a href="#vault">Private Vault</a></li>
+          <li><a href="#privacy">Privacy Engine</a></li>
+          <li><a href="#pricing">PRO Access</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#download" class="nav-cta-btn" id="navGetAppBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.36-.58.66-1.09 1.73-.95 2.76 1.01.08 2.06-.52 2.68-1.27z" />
+          </svg>
+          <span>Get App</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="pill-badge">
+          <span class="dot"></span>
+          <span>Dual Architecture • Toolkit & Secure Vault</span>
+        </div>
+
+        <h1 class="hero-title">
+          Your Digital Workbench.<br>
+          <span class="gradient-text">Your Private Space.</span>
+        </h1>
+
+        <p class="hero-description">
+          Utility Desk seamlessly unites everyday precision tools—smart calculator, screen caliper ruler, spirit bubble
+          level, protractor, and converter—with an impenetrable, on-device private vault for your confidential photos,
+          videos, and notes.
+        </p>
+
+        <div class="hero-actions" id="download">
+          <a href="#" class="btn-appstore" id="heroDownloadBtn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.36-.58.66-1.09 1.73-.95 2.76 1.01.08 2.06-.52 2.68-1.27z" />
+            </svg>
+            <div class="btn-appstore-text">
+              <small>Download on the</small>
+              <span>App Store</span>
+            </div>
+          </a>
+
+          <a href="#toolkit" class="btn-secondary">
+            <span>Explore Tools</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="hero-badge-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span>100% On-Device Storage</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Zero Cloud Leak</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span>Biometric Lock</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Interactive Mockup -->
+      <div class="hero-mockup-wrapper">
+        <div class="floating-glass-card card-left">
+          <div class="tool-icon-box" style="width: 36px; height: 36px;">
+            <img src="assets/icons/calculator_256.png" alt="Calculator">
+          </div>
+          <div>
+            <div style="font-size: 0.82rem; font-weight: 700; color: #fff;">Smart Calculator</div>
+            <div style="font-size: 0.72rem; color: #94a3b8;">Daily arithmetic + vault gate</div>
+          </div>
+        </div>
+
+        <div class="floating-glass-card card-right">
+          <div class="tool-icon-box" style="width: 36px; height: 36px; background: rgba(16, 185, 129, 0.15);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 0.82rem; font-weight: 700; color: #fff;">Encrypted Vault</div>
+            <div style="font-size: 0.72rem; color: #10b981;">AES-256 Local Sandbox</div>
+          </div>
+        </div>
+
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="mockup-header">
+              <div class="mockup-app-title">Utility Desk</div>
+              <span class="mockup-status-dot">Online</span>
+            </div>
+
+            <div class="mockup-tool-grid">
+              <div class="mockup-tool-card">
+                <img src="assets/icons/calculator_256.png" alt="Calculator">
+                <span>Calculator</span>
+              </div>
+              <div class="mockup-tool-card">
+                <img src="assets/icons/ruler_256.png" alt="Ruler">
+                <span>Ruler</span>
+              </div>
+              <div class="mockup-tool-card">
+                <img src="assets/icons/bubble_level_256.png" alt="Bubble Level">
+                <span>Spirit Level</span>
+              </div>
+              <div class="mockup-tool-card">
+                <img src="assets/icons/protractor_256.png" alt="Protractor">
+                <span>Protractor</span>
+              </div>
+            </div>
+
+            <div class="mockup-vault-preview">
+              <div class="mockup-vault-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div class="mockup-vault-text">
+                <h5>Personal Vault Access</h5>
+                <p>Protected by Master PIN & Face ID</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual Pillars Overview Section -->
+  <section class="section-wrapper" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Unified Architecture</div>
+        <h2 class="section-title">Two Essential Worlds. One Seamless App.</h2>
+        <p class="section-desc">Utility Desk is thoughtfully engineered to eliminate clutter by combining daily utility
+          instruments with a rock-solid, private storage container.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1: Productivity Tools -->
+        <div class="pillar-card">
+          <span class="pillar-badge">Productivity & Measure</span>
+          <h3 class="pillar-title">Precision Daily Toolkit</h3>
+          <p class="pillar-desc">
+            A comprehensive set of handy physical and mathematical tools designed for quick daily measurements,
+            conversions, and accurate calculations on your iPhone or iPad.
+          </p>
+          <ul class="pillar-feature-list">
+            <li class="pillar-feature-item">
+              <div class="pillar-check-icon">✓</div>
+              <div class="pillar-feature-text">
+                <strong>Smart Pocket Calculator</strong>
+                <span>Instant standard arithmetic calculations with full keypad fidelity.</span>
+              </div>
+            </li>
+            <li class="pillar-feature-item">
+              <div class="pillar-check-icon">✓</div>
+              <div class="pillar-feature-text">
+                <strong>Screen Caliper Ruler</strong>
+                <span>Measure physical objects directly on glass in mm, cm, or inches.</span>
+              </div>
+            </li>
+            <li class="pillar-feature-item">
+              <div class="pillar-check-icon">✓</div>
+              <div class="pillar-feature-text">
+                <strong>Bubble Spirit Level & Protractor</strong>
+                <span>Pitch, roll, and angle determination with zero-angle calibration.</span>
+              </div>
+            </li>
+            <li class="pillar-feature-item">
+              <div class="pillar-check-icon">✓</div>
+              <div class="pillar-feature-text">
+                <strong>Versatile Unit Converter</strong>
+                <span>Convert lengths, weights, and temperatures on the spot.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2: Private Vault -->
+        <div class="pillar-card">
+          <span class="pillar-badge" style="color: var(--accent-primary); background: rgba(99, 102, 241, 0.1);">Privacy
+            & Security</span>
+          <h3 class="pillar-title">Integrated Personal Vault</h3>
+          <p class="pillar-desc">
+            An impenetrable sanctuary protected by your secret PIN and Face ID. Keep your private photos, videos,
+            passwords, and sensitive notes completely confidential.
+          </p>
+          <ul class="pillar-feature-list">
+            <li class="pillar-feature-item">
+              <div class="pillar-check-icon">✓</div>
+              <div class="pillar-feature-text">
+                <strong>100% Local Device Storage</strong>
+                <span>Files stay on your phone. No remote servers, no cloud synchronization leaks.</span>
+              </div>
+            </li>
+            <li class="pillar-feature-item">
+              <div class="pillar-check-icon">✓</div>
+              <div class="pillar-feature-text">
+                <strong>Direct Secret Camera</strong>
+                <span>Capture photos and videos directly into the vault, bypassing Camera Roll.</span>
+              </div>
+            </li>
+            <li class="pillar-feature-item">
+              <div class="pillar-check-icon">✓</div>
+              <div class="pillar-feature-text">
+                <strong>Encrypted Notes & Passwords</strong>
+                <span>Store credit cards, credentials, and diary entries with card color coding.</span>
+              </div>
+            </li>
+            <li class="pillar-feature-item">
+              <div class="pillar-check-icon">✓</div>
+              <div class="pillar-feature-text">
+                <strong>Emergency Protection Protocols</strong>
+                <span>Decoy PIN, emergency wipe PIN, and automatic instant app-locking.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Toolkit Section -->
+  <section class="section-wrapper" id="toolkit" style="background: rgba(13, 17, 26, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Hands-On Utilities</div>
+        <h2 class="section-title">The Complete Daily Workbench</h2>
+        <p class="section-desc">Experience 5 versatile tools integrated right into your palm, finely calibrated for
+          precision and immediate utility.</p>
+      </div>
+
+      <div class="tools-grid">
+        <!-- Tool 1: Calculator -->
+        <div class="tool-card">
+          <div class="tool-icon-box">
+            <img src="assets/icons/calculator_256.png" alt="Calculator Icon">
+          </div>
+          <h4 class="tool-title">Smart Calculator</h4>
+          <p class="tool-desc">
+            A responsive, high-performance pocket calculator for daily arithmetic, shopping tally, and formula
+            evaluation, also serving as an entryway to your secure vault with your PIN.
+          </p>
+          <div class="tool-tags">
+            <span class="tool-tag-pill">Arithmetic</span>
+            <span class="tool-tag-pill">Haptic Feedback</span>
+            <span class="tool-tag-pill">Instant History</span>
+          </div>
+        </div>
+
+        <!-- Tool 2: Ruler -->
+        <div class="tool-card">
+          <div class="tool-icon-box">
+            <img src="assets/icons/ruler_256.png" alt="Ruler Icon">
+          </div>
+          <h4 class="tool-title">Screen Caliper Ruler</h4>
+          <p class="tool-desc">
+            Turn your phone screen into a physical measuring caliper. Dual sliding calipers let you pinpoint the exact
+            length of screws, cards, jewelry, and small components.
+          </p>
+          <div class="tool-tags">
+            <span class="tool-tag-pill">cm / mm / inches</span>
+            <span class="tool-tag-pill">Dual Calipers</span>
+            <span class="tool-tag-pill">High Precision</span>
+          </div>
+        </div>
+
+        <!-- Tool 3: Bubble Level -->
+        <div class="tool-card">
+          <div class="tool-icon-box">
+            <img src="assets/icons/bubble_level_256.png" alt="Bubble Level Icon">
+          </div>
+          <h4 class="tool-title">Bubble Spirit Level</h4>
+          <p class="tool-desc">
+            Utilizes hardware gyro and accelerometer sensors to provide live pitch and roll inclination readings.
+            Features zero-calibration and surface angle hold for handyman tasks.
+          </p>
+          <div class="tool-tags">
+            <span class="tool-tag-pill">Pitch & Roll</span>
+            <span class="tool-tag-pill">0° Calibration</span>
+            <span class="tool-tag-pill">Angle Lock</span>
+          </div>
+        </div>
+
+        <!-- Tool 4: Protractor -->
+        <div class="tool-card">
+          <div class="tool-icon-box">
+            <img src="assets/icons/protractor_256.png" alt="Protractor Icon">
+          </div>
+          <h4 class="tool-title">Angle Protractor</h4>
+          <p class="tool-desc">
+            Place objects against your screen or inspect diagrams using touch pointer handles to calculate acute, right,
+            obtuse, and reflex angles instantly.
+          </p>
+          <div class="tool-tags">
+            <span class="tool-tag-pill">0° - 360°</span>
+            <span class="tool-tag-pill">Touch Pointers</span>
+            <span class="tool-tag-pill">Angle Classification</span>
+          </div>
+        </div>
+
+        <!-- Tool 5: Unit Converter -->
+        <div class="tool-card">
+          <div class="tool-icon-box">
+            <img src="assets/icons/converter_256.png" alt="Unit Converter Icon">
+          </div>
+          <h4 class="tool-title">Unit Converter</h4>
+          <p class="tool-desc">
+            Switch effortlessly between metric and imperial dimensions. Seamlessly convert meters to feet, kilograms to
+            pounds, and Celsius to Fahrenheit.
+          </p>
+          <div class="tool-tags">
+            <span class="tool-tag-pill">Length</span>
+            <span class="tool-tag-pill">Weight & Mass</span>
+            <span class="tool-tag-pill">Temperature</span>
+          </div>
+        </div>
+
+        <!-- Tool 6: Icon Themes -->
+        <div class="tool-card">
+          <div class="tool-icon-box">
+            <img src="assets/icons/clock.png" alt="Custom Icons">
+          </div>
+          <h4 class="tool-title">Customizable Icons</h4>
+          <p class="tool-desc">
+            Personalize your home screen appearance. Select from a suite of alternative app icons including Calculator,
+            Clock, Weather, Notes, or Ruler styles.
+          </p>
+          <div class="tool-tags">
+            <span class="tool-tag-pill">App Icon Styles</span>
+            <span class="tool-tag-pill">Clean Aesthetics</span>
+            <span class="tool-tag-pill">iOS Alternate Icons</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Vault Features Section -->
+  <section class="section-wrapper" id="vault">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Privacy Fortress</div>
+        <h2 class="section-title">Guard What Matters Most</h2>
+        <p class="section-desc">Your private moments, confidential work documents, and sensitive passwords deserve
+          uncompromising protection.</p>
+      </div>
+
+      <div class="vault-features-grid">
+        <div class="vault-feature-card">
+          <div class="vault-feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+          </div>
+          <h4 class="vault-feature-title">Photo & Video Vault</h4>
+          <p class="vault-feature-desc">Import high-resolution photos and videos into custom folders. View with smooth
+            pinch-to-zoom and play HD videos safely.</p>
+        </div>
+
+        <div class="vault-feature-card">
+          <div class="vault-feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+          </div>
+          <h4 class="vault-feature-title">Direct Secret Camera</h4>
+          <p class="vault-feature-desc">Snap photos and record video that saves directly inside the vault without ever
+            touching your system photo library or iCloud stream.</p>
+        </div>
+
+        <div class="vault-feature-card">
+          <div class="vault-feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h4 class="vault-feature-title">Encrypted Secret Notes</h4>
+          <p class="vault-feature-desc">Jot down passwords, account numbers, cryptocurrency recovery phrases, or private
+            diary entries with color-coded organization and pins.</p>
+        </div>
+
+        <div class="vault-feature-card">
+          <div class="vault-feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+          </div>
+          <h4 class="vault-feature-title">Private Web Browser</h4>
+          <p class="vault-feature-desc">Browse incognito with multiple independent profiles. Download web media directly
+            to your vault and clear cookies in one click.</p>
+        </div>
+
+        <div class="vault-feature-card">
+          <div class="vault-feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h4 class="vault-feature-title">Decoy & Emergency Wipe</h4>
+          <p class="vault-feature-desc">Configure a secondary Decoy PIN to open a harmless decoy vault under pressure,
+            or set an Emergency Destroy PIN to obliterate data instantly.</p>
+        </div>
+
+        <div class="vault-feature-card">
+          <div class="vault-feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 6h18"></path>
+              <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+              <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+            </svg>
+          </div>
+          <h4 class="vault-feature-title">30-Day Recycle Bin</h4>
+          <p class="vault-feature-desc">Deleted files are preserved in an isolated trash bin for 30 days before
+            permanent erasure, protecting you from accidental loss.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy Guarantee Banner -->
+  <section class="section-wrapper" id="privacy">
+    <div class="container">
+      <div class="guarantee-banner">
+        <div class="guarantee-content">
+          <div class="section-tag">Privacy Philosophy</div>
+          <h3>100% On-Device Architecture</h3>
+          <p>
+            Unlike conventional cloud photo storage services that store your files on remote corporate servers subject
+            to breaches, Utility Desk adheres to a strict <strong>Zero-Cloud, On-Device</strong> doctrine.
+          </p>
+          <ul class="guarantee-checklist">
+            <li class="guarantee-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Encrypted files reside strictly in iOS Application Documents</span>
+            </li>
+            <li class="guarantee-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Master Passcode & Biometrics never leave Apple Secure Enclave</span>
+            </li>
+            <li class="guarantee-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Zero server-side account tracking or database records</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="guarantee-comparison">
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem;">Storage Model Comparison</h4>
+          <div class="comparison-row">
+            <span>Storage Location</span>
+            <span class="badge-yes">100% Local Phone</span>
+          </div>
+          <div class="comparison-row">
+            <span>Remote Cloud Hack Risk</span>
+            <span class="badge-yes">Zero (No Cloud)</span>
+          </div>
+          <div class="comparison-row">
+            <span>Internet Needed for Access</span>
+            <span class="badge-yes">No (Fully Offline)</span>
+          </div>
+          <div class="comparison-row">
+            <span>Account Registration Required</span>
+            <span class="badge-yes">No Signup Required</span>
+          </div>
+          <div class="comparison-row">
+            <span>Server Data Mining</span>
+            <span class="badge-yes">Strictly Impossible</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRO Subscription Section -->
+  <section class="section-wrapper" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Premium Access</div>
+        <h2 class="section-title">Upgrade to Utility Desk PRO</h2>
+        <p class="section-desc">Experience uninterrupted tool productivity and absolute security with an ad-free
+          environment and premium speed.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Monthly Plan -->
+        <div class="pricing-card">
+          <div class="plan-name">Monthly PRO</div>
+          <div class="plan-desc">Flexible month-to-month access</div>
+          <div class="plan-price">$2.99 <small>/ month</small></div>
+          <ul class="plan-features">
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>100% Ad-Free Experience</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Instant Startup Speed</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Unlimited Private Albums & Notes</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Cancel Anytime in App Store</span>
+            </li>
+          </ul>
+          <a href="#download" class="btn-plan">Get Monthly</a>
+        </div>
+
+        <!-- Annual Plan (Featured) -->
+        <div class="pricing-card featured">
+          <div class="popular-badge">Most Popular • Save 58%</div>
+          <div class="plan-name">Annual PRO</div>
+          <div class="plan-desc">Best value for year-round protection</div>
+          <div class="plan-price">$14.99 <small>/ year</small></div>
+          <ul class="plan-features">
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>100% Ad-Free across all tools & vault</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Priority Customer Support</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>All Future Toolkit Additions Included</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Billed annually at $1.25 / mo</span>
+            </li>
+          </ul>
+          <a href="#download" class="btn-plan">Get Annual PRO</a>
+        </div>
+
+        <!-- Lifetime Plan -->
+        <div class="pricing-card">
+          <div class="plan-name">Lifetime License</div>
+          <div class="plan-desc">One-time payment for permanent ownership</div>
+          <div class="plan-price">$29.99 <small>one-time</small></div>
+          <ul class="plan-features">
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Never Pay Again</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Permanent Ad-Free Security</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Family Sharing Eligible</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Instant Restoration via Apple ID</span>
+            </li>
+          </ul>
+          <a href="#download" class="btn-plan">Buy Lifetime</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-wrapper" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Help & Clarity</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Everything you need to know about Utility Desk, daily measurement tools, and vault
+          privacy.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>What is Utility Desk?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Utility Desk is an all-in-one mobile toolkit combining practical everyday measurement tools (Calculator,
+              Screen Caliper Ruler, Spirit Bubble Level, Angle Protractor, Unit Converter) with an on-device personal
+              vault for safely storing confidential photos, videos, and private notes.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the Calculator interact with the Private Vault?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>The Calculator functions as a full-featured everyday arithmetic tool. When configured with vault
+              protection, entering your secret PIN and pressing the "=" button opens your private vault. You can also
+              unlock directly with Face ID or Touch ID.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Where are my private photos and notes stored?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>100% locally on your iOS device within the app's secure sandboxed storage. Your files and notes are never
+              uploaded to any cloud server or company database, giving you complete sovereign control over your privacy.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What happens if I forget my Master PIN?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Because Utility Desk does not maintain remote servers or bypass backdoors, only you possess the master
+              PIN. If enabled, you can unlock using Face ID or Touch ID. We strongly encourage keeping your PIN in a
+              safe place.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is the Decoy PIN and Emergency Wipe feature?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>The Decoy PIN allows you to set up an alternative passcode that unlocks an innocent, dummy vault. The
+              Emergency Destroy PIN immediately and irrevocably erases all encrypted vault contents in critical
+              emergencies.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I cancel or restore my PRO subscription?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Subscriptions are managed securely by Apple. You can cancel auto-renewal anytime in your iPhone Settings
+              under Apple ID &gt; Subscriptions. If reinstalling or switching devices, tap "Restore Purchases" in the
+              app's PRO screen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon-wrapper" style="width: 32px; height: 32px;">
+              <img src="assets/icons/vault.png" alt="Utility Desk Logo">
+            </div>
+            <span>Utility Desk</span>
+          </div>
+          <p>
+            The dual-engine productivity and privacy toolkit for iOS. All-in-one measurement tools paired with an
+            on-device encrypted vault.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Toolkit</h5>
+          <ul class="footer-links">
+            <li><a href="#toolkit">Smart Calculator</a></li>
+            <li><a href="#toolkit">Caliper Ruler</a></li>
+            <li><a href="#toolkit">Bubble Spirit Level</a></li>
+            <li><a href="#toolkit">Angle Protractor</a></li>
+            <li><a href="#toolkit">Unit Converter</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Security Vault</h5>
+          <ul class="footer-links">
+            <li><a href="#vault">Photo & Video Vault</a></li>
+            <li><a href="#vault">Direct Secret Camera</a></li>
+            <li><a href="#vault">Encrypted Notes</a></li>
+            <li><a href="#vault">Incognito Browser</a></li>
+            <li><a href="#pricing">PRO Ad-Free</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal & Support</h5>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="#faq">FAQ & Assistance</a></li>
+            <li><a href="mailto:support@binhmmo.com">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> Utility Desk. All rights reserved.
+        </div>
+        <div>
+          Apple, the Apple logo, iPhone, and iPad are trademarks of Apple Inc., registered in the U.S. and other
+          countries. App Store is a service mark of Apple Inc.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
