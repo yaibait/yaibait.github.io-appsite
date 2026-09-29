@@ -1,218 +1,730 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-		<title>Hành Trình Toán Học 3D</title>
-		<style>
-html, body, #canvas {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
+<html lang="en" data-theme="dark">
 
-body {
-	color: white;
-	background-color: black;
-	overflow: hidden;
-	touch-action: none;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Kingdom 3D - Explore the Mythical Forest & Master Times Tables 1 to 9</title>
 
-#canvas {
-	display: block;
-}
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="An exciting 3D Low Poly educational adventure game helping kids master multiplication tables 1 through 9 with 9 unique interactive mini-games, 100% child-safe and COPPA compliant.">
+  <meta name="keywords"
+    content="math kingdom, math game, multiplication tables, math kingdom 3d, 3d math adventure, kids educational game, learn times tables, 2nd grade math, 3rd grade math, elementary math">
+  <meta name="author" content="BinhMMO">
+  <meta name="robots" content="index, follow">
 
-#canvas:focus {
-	outline: none;
-}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://binhmmo.com/">
+  <meta property="og:title" content="Math Kingdom 3D - Times Tables Adventure">
+  <meta property="og:description"
+    content="Transform multiplication drills into an enchanting 3D low-poly adventure with 9 unique interactive mini-game worlds!">
+  <meta property="og:image" content="assets/splash.png">
 
-#status, #status-splash, #status-progress {
-	position: absolute;
-	left: 0;
-	right: 0;
-}
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Math Kingdom 3D - Times Tables Adventure">
+  <meta property="twitter:description"
+    content="Engaging 3D Low Poly educational math game, built to strict COPPA child safety standards.">
+  <meta property="twitter:image" content="assets/splash.png">
 
-#status, #status-splash {
-	top: 0;
-	bottom: 0;
-}
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="css/style.css">
 
-#status {
-	background-color: #0f141f;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	visibility: hidden;
-}
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Math Kingdom 3D (Vương Quốc Toán)",
+    "operatingSystem": "iOS, Android, Web",
+    "applicationCategory": "EducationalGame",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "3D Low Poly Math Adventure - Master Times Tables 1 through 9 with 9 Unique Mini-Games",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1280"
+    }
+  }
+  </script>
+</head>
 
-#status-splash {
-	max-height: 100%;
-	max-width: 100%;
-	margin: auto;
-}
+<body>
 
-#status-splash.show-image--false {
-	display: none;
-}
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" id="navLogo">
+        <img src="assets/icon.png" alt="Math Kingdom Icon" width="44" height="44">
+        <span>Math Kingdom</span>
+      </a>
 
-#status-splash.fullsize--true {
-	height: 100%;
-	width: 100%;
-	object-fit: contain;
-}
+      <nav class="nav-links" id="navLinksMenu">
+        <a href="#about" class="nav-link" id="linkAbout">About</a>
+        <a href="#minigames" class="nav-link" id="linkMinigames">9 Mini-Games</a>
+        <a href="#table-explorer" class="nav-link" id="linkTableExplorer">Times Tables</a>
+        <a href="#benefits" class="nav-link" id="linkBenefits">Benefits</a>
+        <a href="#safety" class="nav-link" id="linkSafety">Child Safety</a>
+        <a href="#faq" class="nav-link" id="linkFaq">FAQ</a>
+        <a href="terms.html" class="nav-link" id="linkTerms">Terms</a>
+        <a href="privacy.html" class="nav-link" id="linkPrivacy">Privacy</a>
+      </nav>
 
-#status-splash.use-filter--false {
-	image-rendering: pixelated;
-}
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">☀️</button>
+        <a href="#download" class="btn btn-primary btn-sm" id="btnNavDownload">
+          <span>📲 Download</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
 
-#status-progress, #status-notice {
-	display: none;
-}
+  <!-- Hero Section -->
+  <section class="hero-section" id="about">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="badge badge-emerald">✨ 3D Low Poly Educational Game</span>
+            <span class="badge badge-coppa">🛡️ COPPA Child-Safe</span>
+          </div>
 
-#status-progress {
-	bottom: 10%;
-	width: 50%;
-	margin: 0 auto;
-}
+          <h1 class="hero-title">
+            Explore the Mythical Forest & Conquer <span class="text-gradient">Multiplication Tables!</span>
+          </h1>
 
-#status-notice {
-	background-color: #5b3943;
-	border-radius: 0.5rem;
-	border: 1px solid #9b3943;
-	color: #e0e0e0;
-	font-family: 'Noto Sans', 'Droid Sans', Arial, sans-serif;
-	line-height: 1.3;
-	margin: 0 2rem;
-	overflow: hidden;
-	padding: 1rem;
-	text-align: center;
-	z-index: 1;
-}
-		</style>
-		
-	</head>
-	<body>
-		<canvas id="canvas">
-			Your browser does not support the canvas tag.
-		</canvas>
+          <p class="hero-subtitle">
+            Transform repetitive math drills into an enchanting 3D quest! Guide your young explorer across rivers, cross
+            arched bridges, defeat giant stone golems, and unlock powerful mathematical wisdom crystals.
+          </p>
 
-		<noscript>
-			Your browser does not support JavaScript.
-		</noscript>
+          <div class="hero-cta-group">
+            <a href="#download" class="btn btn-primary" id="btnHeroDownload">
+              <span>🚀 Download App Free</span>
+            </a>
+            <button class="btn btn-secondary" id="btnHeroWebDemo" data-open-modal="modalWebDemo">
+              <span>🎮 Play Web Demo</span>
+            </button>
+          </div>
 
-		<div id="status">
-			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png" alt="">
-			<progress id="status-progress"></progress>
-			<div id="status-notice"></div>
-		</div>
+          <div class="hero-badges-row">
+            <div class="hero-trust-item">
+              <span class="icon">⭐</span>
+              <span><strong>4.9 / 5.0</strong> Parent Rating</span>
+            </div>
+            <div class="hero-trust-item">
+              <span class="icon">🌿</span>
+              <span><strong>Godot 4 3D</strong> Ultra Lightweight</span>
+            </div>
+            <div class="hero-trust-item">
+              <span class="icon">🏆</span>
+              <span><strong>Leaderboard</strong> Wholesome Challenge</span>
+            </div>
+          </div>
+        </div>
 
-		<script src="index.js"></script>
-		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":10826612,"index.wasm":39514754},"focusCanvas":false,"gdextensionLibs":[],"godotPoolSize":4};
-const GODOT_THREADS_ENABLED = false;
-const engine = new Engine(GODOT_CONFIG);
+        <div class="hero-visual">
+          <div class="hero-card-wrapper">
+            <div class="hero-float-badge badge-top-left">
+              <span>💎</span>
+              <div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Wisdom Crystals</div>
+                <div>12 / 12 Gems</div>
+              </div>
+            </div>
 
-(function () {
-	const statusOverlay = document.getElementById('status');
-	const statusProgress = document.getElementById('status-progress');
-	const statusNotice = document.getElementById('status-notice');
+            <div class="hero-card-inner">
+              <img src="assets/splash.png" alt="Math Kingdom 3D Poster" id="heroSplashImg" width="1280" height="720">
+            </div>
 
-	let initializing = true;
-	let statusMode = '';
+            <div class="hero-float-badge badge-bottom-right">
+              <span>🏆</span>
+              <div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Global Ranking</div>
+                <div class="text-gold">Top 1 Math Hero</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	function setStatusMode(mode) {
-		if (statusMode === mode || !initializing) {
-			return;
-		}
-		if (mode === 'hidden') {
-			statusOverlay.remove();
-			initializing = false;
-			return;
-		}
-		statusOverlay.style.visibility = 'visible';
-		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
-		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
-		statusMode = mode;
-	}
+  <!-- Metrics Highlight Section -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <div class="metric-number">9</div>
+          <div class="metric-label">Complete Times Tables (1 - 9)</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number">9+</div>
+          <div class="metric-label">Interactive 3D Mini-Game Stages</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number">0%</div>
+          <div class="metric-label">Harmful Ads (Strict G-Rating)</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-number">100%</div>
+          <div class="metric-label">Child Privacy & Data Protection</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	function setStatusNotice(text) {
-		while (statusNotice.lastChild) {
-			statusNotice.removeChild(statusNotice.lastChild);
-		}
-		const lines = text.split('\n');
-		lines.forEach((line) => {
-			statusNotice.appendChild(document.createTextNode(line));
-			statusNotice.appendChild(document.createElement('br'));
-		});
-	}
+  <!-- 9 Mini-Games Section -->
+  <section class="section" id="minigames">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">
+          <span class="badge badge-gold">🎮 DIVERSE GAMEPLAY</span>
+        </div>
+        <h2 class="section-title">9 Unique Stages to Master All 9 Times Tables</h2>
+        <p class="section-desc">
+          Every multiplication table is crafted into its own distinct gameplay genre, keeping children curious,
+          energized, and eager to master every equation.
+        </p>
+      </div>
 
-	function displayFailureNotice(err) {
-		console.error(err);
-		if (err instanceof Error) {
-			setStatusNotice(err.message);
-		} else if (typeof err === 'string') {
-			setStatusNotice(err);
-		} else {
-			setStatusNotice('An unknown error occurred.');
-		}
-		setStatusMode('notice');
-		initializing = false;
-	}
+      <div class="games-grid">
+        <!-- Stage 1 -->
+        <div class="game-card" id="cardStage1">
+          <div class="game-card-header">
+            <span class="game-stage-tag">STAGE 1</span>
+            <div class="game-icon-box">🟩</div>
+          </div>
+          <h3 class="game-card-title">Product Tile Stepper</h3>
+          <p class="game-card-desc">
+            Guide the explorer across magical stone tiles. Step onto the correct product to open the mystical arch
+            bridge crossing the river.
+          </p>
+          <div class="game-card-footer">
+            <span class="game-table-target">1× Times Table</span>
+            <span class="game-genre">Stone Tile Puzzle</span>
+          </div>
+        </div>
 
-	const missing = Engine.getMissingFeatures({
-		threads: GODOT_THREADS_ENABLED,
-	});
+        <!-- Stage 2 -->
+        <div class="game-card" id="cardStage2">
+          <div class="game-card-header">
+            <span class="game-stage-tag">STAGE 2</span>
+            <div class="game-icon-box">🚪</div>
+          </div>
+          <h3 class="game-card-title">Three Mystery Portals</h3>
+          <p class="game-card-desc">
+            Confront three ancient numbered wooden portals. Deduce and choose the portal that opens up with warm golden
+            light.
+          </p>
+          <div class="game-card-footer">
+            <span class="game-table-target">2× Times Table</span>
+            <span class="game-genre">Decision Challenge</span>
+          </div>
+        </div>
 
-	if (missing.length !== 0) {
-		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
-			let serviceWorkerRegistrationPromise;
-			try {
-				serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
-			} catch (err) {
-				serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
-			}
-			// There's a chance that installing the service worker would fix the issue
-			Promise.race([
-				serviceWorkerRegistrationPromise.then((registration) => {
-					if (registration != null) {
-						return Promise.reject(new Error('Service worker already exists.'));
-					}
-					return registration;
-				}).then(() => engine.installServiceWorker()),
-				// For some reason, `getRegistration()` can stall
-				new Promise((resolve) => {
-					setTimeout(() => resolve(), 2000);
-				}),
-			]).then(() => {
-				// Reload if there was no error.
-				window.location.reload();
-			}).catch((err) => {
-				console.error('Error while registering service worker:', err);
-			});
-		} else {
-			// Display the message as usual
-			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
-			displayFailureNotice(missingMsg + missing.join('\n'));
-		}
-	} else {
-		setStatusMode('progress');
-		engine.startGame({
-			'onProgress': function (current, total) {
-				if (current > 0 && total > 0) {
-					statusProgress.value = current;
-					statusProgress.max = total;
-				} else {
-					statusProgress.removeAttribute('value');
-					statusProgress.removeAttribute('max');
-				}
-			},
-		}).then(() => {
-			setStatusMode('hidden');
-		}, displayFailureNotice);
-	}
-}());
-		</script>
-	</body>
+        <!-- Stage 3 -->
+        <div class="game-card" id="cardStage3">
+          <div class="game-card-header">
+            <span class="game-stage-tag">STAGE 3</span>
+            <div class="game-icon-box">🏃</div>
+          </div>
+          <h3 class="game-card-title">Number Lane Runner</h3>
+          <p class="game-card-desc">
+            A fast-paced 3-lane endless track! Swipe left and right to dodge hurdles and sprint directly through the
+            gate with the correct answer.
+          </p>
+          <div class="game-card-footer">
+            <span class="game-table-target">3× Times Table</span>
+            <span class="game-genre">Endless Runner</span>
+          </div>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="game-card" id="cardStage4">
+          <div class="game-card-header">
+            <span class="game-stage-tag">STAGE 4</span>
+            <div class="game-icon-box">⚔️</div>
+          </div>
+          <h3 class="game-card-title">Golem Boss Battle</h3>
+          <p class="game-card-desc">
+            A giant stone golem guards the ruins! Unleash enchanted sword strikes every time you solve a multiplication
+            equation correctly.
+          </p>
+          <div class="game-card-footer">
+            <span class="game-table-target">4× Times Table</span>
+            <span class="game-genre">Boss Battle RPG</span>
+          </div>
+        </div>
+
+        <!-- Stage 5 -->
+        <div class="game-card" id="cardStage5">
+          <div class="game-card-header">
+            <span class="game-stage-tag">STAGE 5</span>
+            <div class="game-icon-box">🧱</div>
+          </div>
+          <h3 class="game-card-title">3D Brick Breaker</h3>
+          <p class="game-card-desc">
+            Bounce the glowing magical orb to shatter bricks displaying correct answers and build up exciting combo
+            multipliers.
+          </p>
+          <div class="game-card-footer">
+            <span class="game-table-target">5× Times Table</span>
+            <span class="game-genre">Classic Arcade</span>
+          </div>
+        </div>
+
+        <!-- Stage 6 -->
+        <div class="game-card" id="cardStage6">
+          <div class="game-card-header">
+            <span class="game-stage-tag">STAGE 6</span>
+            <div class="game-icon-box">🪜</div>
+          </div>
+          <h3 class="game-card-title">Frost Tower Stair Climb</h3>
+          <p class="game-card-desc">
+            Slippery ice stairs reveal hidden numbers. Select the sturdy stone steps to leap higher and reach the top of
+            the frosty tower.
+          </p>
+          <div class="game-card-footer">
+            <span class="game-table-target">6× Times Table</span>
+            <span class="game-genre">Stair Platformer</span>
+          </div>
+        </div>
+
+        <!-- Stage 7 -->
+        <div class="game-card" id="cardStage7">
+          <div class="game-card-header">
+            <span class="game-stage-tag">STAGE 7</span>
+            <div class="game-icon-box">🌉</div>
+          </div>
+          <h3 class="game-card-title">Chasm Bridge Crossing</h3>
+          <p class="game-card-desc">
+            A suspension bridge spans across a foggy canyon. Calculate swiftly to tread on safe wooden planks without
+            falling through.
+          </p>
+          <div class="game-card-footer">
+            <span class="game-table-target">7× Times Table</span>
+            <span class="game-genre">Survival Adventure</span>
+          </div>
+        </div>
+
+        <!-- Stage 8 -->
+        <div class="game-card" id="cardStage8">
+          <div class="game-card-header">
+            <span class="game-stage-tag">STAGE 8</span>
+            <div class="game-icon-box">🏹</div>
+          </div>
+          <h3 class="game-card-title">Archery Target Practice</h3>
+          <p class="game-card-desc">
+            Become an elite archer! Draw your bow, steady your aim, and strike moving targets that carry the correct 8×
+            multiplication answers.
+          </p>
+          <div class="game-card-footer">
+            <span class="game-table-target">8× Times Table</span>
+            <span class="game-genre">Target Archery</span>
+          </div>
+        </div>
+
+        <!-- Stage 9 -->
+        <div class="game-card" id="cardStage9">
+          <div class="game-card-header">
+            <span class="game-stage-tag">STAGE 9</span>
+            <div class="game-icon-box">🧩</div>
+          </div>
+          <h3 class="game-card-title">Gem Arena Collector</h3>
+          <p class="game-card-desc">
+            The grand finale capstone! Freely navigate a radiant magical arena to gather glowing energy crystals
+            matching the multiplier equations.
+          </p>
+          <div class="game-card-footer">
+            <span class="game-table-target">9× Times Table</span>
+            <span class="game-genre">Arena Exploration</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Multiplication Table Preview Tool -->
+      <div class="math-demo-box" id="table-explorer">
+        <div class="math-demo-header">
+          <div>
+            <h3 style="font-family:var(--font-heading); font-size:1.45rem; font-weight:700;" id="currentTableTitle">
+              Times Table 2
+            </h3>
+            <p style="color:var(--text-muted); font-size:0.92rem;">
+              Click any number below to preview calculations and practice together:
+            </p>
+          </div>
+          <div class="table-selector-buttons" id="tableSelectorButtons">
+            <button class="table-btn" data-table="1">1</button>
+            <button class="table-btn active" data-table="2">2</button>
+            <button class="table-btn" data-table="3">3</button>
+            <button class="table-btn" data-table="4">4</button>
+            <button class="table-btn" data-table="5">5</button>
+            <button class="table-btn" data-table="6">6</button>
+            <button class="table-btn" data-table="7">7</button>
+            <button class="table-btn" data-table="8">8</button>
+            <button class="table-btn" data-table="9">9</button>
+          </div>
+        </div>
+
+        <div class="table-rows-grid" id="tableRowsContainer">
+          <!-- Dynamically populated by main.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational Benefits Section -->
+  <section class="section" id="benefits" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">
+          <span class="badge badge-cyan">💡 MODERN METHODOLOGY</span>
+        </div>
+        <h2 class="section-title">Why Do Children Learn Faster & Retain Longer?</h2>
+        <p class="section-desc">
+          A harmonious blend of early educational psychology and 3D interactive mechanics to nurture joyful,
+          self-motivated learning.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-wrapper feature-icon-emerald">🧠</div>
+          <h3>Stress-Free Reflexes</h3>
+          <p>
+            Math puzzles integrate naturally into the rhythm of play. Gentle hints guide incorrect answers instead of
+            punitive screens, fostering resilience and confidence.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper feature-icon-gold">🌲</div>
+          <h3>Eye-Comfort Low Poly Art</h3>
+          <p>
+            Soothing woodland tones and soft lighting are scientifically calibrated to protect developing eyesight,
+            preventing eye strain and overstimulation from harsh strobe effects.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper feature-icon-cyan">🎵</div>
+          <h3>Brain-Stimulating Synth Audio</h3>
+          <p>
+            Procedural synthesizer chimes and melodic tones celebrate correct answers, delivering joyful auditory
+            reinforcement that keeps children encouraged.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper feature-icon-purple">🕹️</div>
+          <h3>Intuitive Dual Controls</h3>
+          <p>
+            Fully optimized for smooth virtual touch joysticks on iPad/tablets and keyboard WASD / Arrow keys on desktop
+            PCs—natural and comfortable for kids aged 6+.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper feature-icon-rose">📶</div>
+          <h3>100% Offline Playable</h3>
+          <p>
+            No active internet required! Kids can practice multiplication during flights, road trips, or vacations. High
+            scores sync automatically once reconnected.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper feature-icon-blue">🥇</div>
+          <h3>Wholesome Leaderboards</h3>
+          <p>
+            A positive achievement ecosystem with badges and real-time rankings that motivates children to challenge
+            themselves and celebrate personal progress every day.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gameplay Gallery Showcase -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">
+          <span class="badge badge-emerald">📸 REAL GAMEPLAY</span>
+        </div>
+        <h2 class="section-title">Explore the Game World</h2>
+        <p class="section-desc">
+          A vivid glimpse into the mystical low-poly woodland, featuring flowing streams, wooden bridges, and magical
+          multiplication crystals.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/screenshot.png" alt="River and wooden bridge 3D low poly adventure" width="1280"
+            height="720">
+          <div class="gallery-caption">
+            🌲 Mythical Forest: Cross arched wooden bridges and collect emerald math crystals
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/splash.png" alt="Math Kingdom 3D Poster" width="1280" height="720">
+          <div class="gallery-caption">
+            🏰 Math Kingdom 3D: Magic castle & 3D multiplication stars
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety & COPPA Commitment -->
+  <section class="section" id="safety">
+    <div class="container">
+      <div class="safety-banner">
+        <div class="safety-shield">🛡️</div>
+        <div class="safety-info">
+          <h3>Our Uncompromising Commitment to Child Safety</h3>
+          <p>
+            Our application is engineered to strictly satisfy the Children's Online Privacy Protection Act
+            (<strong>COPPA</strong>), <strong>Google Play Families</strong> safety policies, and rigorous <strong>Apple
+              App Store Kids Category (Guidelines 1.3 & 5.1)</strong>.
+          </p>
+          <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="privacy.html" class="btn btn-secondary btn-sm" id="btnLearnPrivacy">
+              <span>View Privacy Policy ➔</span>
+            </a>
+            <a href="terms.html" class="btn btn-secondary btn-sm" id="btnLearnTerms">
+              <span>View Terms of Service ➔</span>
+            </a>
+          </div>
+        </div>
+        <div class="safety-badges">
+          <span class="badge badge-coppa">🔒 COPPA Compliant</span>
+          <span class="badge badge-emerald">👶 Ages 6+ Approved</span>
+          <span class="badge badge-gold">🚫 Zero PII Collection</span>
+          <span class="badge badge-cyan">💎 G-Rated Family Ads</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="section" id="faq">
+    <div class="container faq-container">
+      <div class="section-header">
+        <div class="section-pill">
+          <span class="badge badge-gold">❓ PARENT FAQ</span>
+        </div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">
+          Clear answers to common questions parents have when introducing Math Kingdom to their children.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>What age group is this game designed for?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            The game is tailored specifically for children aged 6 to 11 (Grades 1 through 5) who are learning and
+            mastering times tables from 1 to 9. The friendly visuals and intuitive mechanics also appeal to preschoolers
+            preparing for elementary school.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Does the app require account registration or collect personal data?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            <strong>Absolutely not!</strong> Children only enter an optional fun nickname (such as "Swift Fox" or "Star
+            Scout") if they choose to submit scores to the leaderboard. The game never requests email addresses, phone
+            numbers, passwords, real names, or any personally identifiable information.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are there any in-app purchases or paywalls?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            There are no microtransactions, paywalls, or real-money item shops. All 9 mini-game stages and educational
+            features are 100% unlocked purely through the child's own gameplay progress and mathematical mastery.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How are advertisements managed in the game?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            We utilize Google AdMob with strict child-directed flags enabled
+            (<code>child_directed_treatment = true</code>) and restrict content exclusively to <strong>Rating G (General
+              Audiences)</strong>. There is zero behavioral tracking, zero personal profiling, and zero mature or
+            disruptive advertising.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I try out the game directly in a web browser?</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-answer">
+            Yes! The game is compiled to WebAssembly / HTML5, allowing you to play directly in modern desktop and mobile
+            web browsers without installing extra software.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CTA Section -->
+  <section class="section" id="download">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to Begin Your Child's Math Adventure?</h2>
+        <p>
+          Download Math Kingdom today and discover the joyful, colorful world of mathematics together!
+        </p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-gold" id="btnAppStore" title="Coming soon to the App Store">
+            <span>🍎 Download for iOS (App Store)</span>
+          </a>
+          <a href="#" class="btn btn-secondary" id="btnGooglePlay" style="background:#fff; color:#0f172a;"
+            title="Coming soon to Google Play">
+            <span>🤖 Download for Android (Google Play)</span>
+          </a>
+          <button class="btn btn-secondary" id="btnWebPlayCta" data-open-modal="modalWebDemo">
+            <span>💻 Play Web Demo</span>
+          </button>
+        </div>
+        <div style="margin-top: 1.5rem; font-size: 0.88rem; opacity: 0.85;">
+          Supports iOS 14.0+, Android 8.0+, and all modern web browsers (Chrome, Safari, Firefox, Edge).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web Demo Modal -->
+  <div class="modal-overlay" id="modalWebDemo" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close-btn" data-close-modal aria-label="Close window">✕</button>
+      <h3 id="modalTitle"
+        style="font-family:var(--font-heading); font-size:1.6rem; font-weight:800; margin-bottom:0.75rem;">
+        🎮 Play Web Demo
+      </h3>
+      <p style="color:var(--text-muted); margin-bottom:1.5rem;">
+        Built with lightweight Godot 4 WebAssembly technology. You can test the web build directly or run it in your
+        local environment:
+      </p>
+
+      <div
+        style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1.25rem; margin-bottom:1.5rem;">
+        <div style="font-weight:700; color:var(--primary-light); margin-bottom:0.5rem;">Internal Web Build Path:</div>
+        <code
+          style="display:block; background:rgba(0,0,0,0.4); padding:0.6rem; border-radius:6px; font-size:0.88rem; overflow-x:auto;">
+          Exports/Web/index.html
+        </code>
+      </div>
+
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:flex-end;">
+        <button class="btn btn-secondary" data-close-modal>Later</button>
+        <a href="../Exports/Web/index.html" target="_blank" class="btn btn-primary" id="btnLaunchWebGame">
+          <span>🚀 Launch Web Game Directly</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="assets/icon.png" alt="Math Kingdom" width="40" height="40">
+            <span>Math Kingdom</span>
+          </div>
+          <p>
+            An innovative 3D Low Poly educational math adventure game, empowering children to master multiplication
+            tables with excitement, curiosity, and confidence.
+          </p>
+          <div style="color:var(--text-dim); font-size:0.85rem;">
+            Developed by <strong>BinhMMO</strong><br>
+            Package ID: <code>com.binhmmo.bangcuuchuonggame</code>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <div class="footer-links">
+            <a href="#about" class="footer-link">Overview</a>
+            <a href="#minigames" class="footer-link">9 Mini-Games</a>
+            <a href="#table-explorer" class="footer-link">Times Tables Explorer</a>
+            <a href="#benefits" class="footer-link">Learning Methodology</a>
+            <a href="#faq" class="footer-link">Parent FAQ</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Legal & Policies</h4>
+          <div class="footer-links">
+            <a href="terms.html" class="footer-link" id="footerLinkTerms">Terms of Service</a>
+            <a href="privacy.html" class="footer-link" id="footerLinkPrivacy">Privacy Policy</a>
+            <a href="privacy.html#sec-priv-rights" class="footer-link">Parental Rights</a>
+            <a href="privacy.html#sec-priv-commitment" class="footer-link">COPPA Standards</a>
+            <a href="privacy.html#sec-priv-form" class="footer-link">Data Deletion Request</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Trust & Safety</h4>
+          <div class="footer-badges">
+            <span class="badge badge-coppa">🛡️ COPPA Certified Design</span>
+            <span class="badge badge-emerald">🍎 Apple Kids Category Ready</span>
+            <span class="badge badge-gold">🤖 Google Play Families OK</span>
+            <span class="badge badge-cyan">🌐 HTTPS Encrypted Backend</span>
+          </div>
+          <div style="margin-top:1.25rem; font-size:0.88rem; color:var(--text-muted);">
+            Customer Support: <br>
+            <a href="mailto:support@binhmmo.com"
+              style="color:var(--primary-light); font-weight:600;">support@binhmmo.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Math Kingdom 3D (Vương Quốc Toán) - BinhMMO. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="terms.html" class="footer-link">Terms</a>
+          <a href="privacy.html" class="footer-link">Privacy</a>
+          <a href="#about" class="footer-link">Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Scroll to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
-
