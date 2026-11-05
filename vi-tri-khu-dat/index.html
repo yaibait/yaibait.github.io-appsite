@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vị Trí Lô Đất - Định Vị Thửa Đất VN-2000 & WGS-84 Chuẩn Quốc Gia</title>
+  <meta name="description" content="Ứng dụng định vị thửa đất, quét ảnh sổ đỏ OCR, chuyển đổi toạ độ VN-2000 & WGS-84, tính diện tích và xem ranh giới đa giác trên bản đồ vệ tinh chính xác nhất.">
+  <meta name="keywords" content="định vị thửa đất, toạ độ VN-2000, quét sổ đỏ, đo diện tích đất, toạ độ địa chính, tra cứu sổ đỏ, WGS84">
+  <link rel="icon" type="image/png" href="ImagesIntro/app-icon.png">
+  <link rel="apple-touch-icon" href="ImagesIntro/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrap">
+        <a href="index.html" class="brand-link">
+          <img src="ImagesIntro/app-icon.png" alt="Logo Vị Trí Lô Đất" class="brand-icon">
+          <div class="brand-text-wrap">
+            <span class="brand-title">Vị Trí Lô Đất</span>
+            <span class="brand-subtitle">VN-2000 & WGS-84</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#features" class="active">Tính Năng</a></li>
+          <li><a href="#screenshots">Hình Ảnh</a></li>
+          <li><a href="#standards">Chuẩn VN-2000</a></li>
+          <li><a href="#faq">Hỏi Đáp</a></li>
+          <li><a href="terms.html">Điều Khoản</a></li>
+          <li><a href="privacy.html">Bảo Mật</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#download" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.36-.58.67-1.09 1.74-.95 2.77 1 .08 2.05-.53 2.68-1.28z"/>
+            </svg>
+            Tải Trên App Store
+          </a>
+        </div>
+
+        <button class="mobile-menu-btn" aria-label="Mở menu">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel">
+      <a href="#features">Tính Năng</a>
+      <a href="#screenshots">Hình Ảnh Thực Tế</a>
+      <a href="#standards">Quy Chuẩn VN-2000</a>
+      <a href="#faq">Hỏi Đáp (FAQ)</a>
+      <a href="terms.html">Điều Khoản Sử Dụng</a>
+      <a href="privacy.html">Chính Sách Bảo Mật</a>
+      <a href="#download" style="color: var(--primary);">Tải Ứng Dụng</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span>Phiên bản mới 2.0 • Hỗ trợ iOS & iPadOS</span>
+          </div>
+          <h1 class="hero-title">
+            Định Vị Thửa Đất <br>
+            <span class="text-gradient">VN-2000 & WGS-84</span>
+          </h1>
+          <p class="hero-desc">
+            Công cụ tra cứu toạ độ sổ đỏ hàng đầu Việt Nam. Tự động quét camera OCR bảng toạ độ góc ranh, hiển thị đa giác ranh giới trên bản đồ vệ tinh thực địa, đo chiều dài cạnh và tính diện tích chuẩn xác Bộ TN&MT.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#download" class="btn btn-primary" style="padding: 12px 28px; font-size: 1.05rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.36-.58.67-1.09 1.74-.95 2.77 1 .08 2.05-.53 2.68-1.28z"/>
+              </svg>
+              Tải Miễn Phí Trên App Store
+            </a>
+            <a href="#screenshots" class="btn btn-secondary" style="padding: 12px 24px;">
+              Xem Demo Hình Ảnh
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h4>63 Tỉnh</h4>
+              <p>Kinh tuyến trục riêng</p>
+            </div>
+            <div class="stat-item">
+              <h4>Múi 3° & 6°</h4>
+              <p>Chuẩn Bộ TN&MT</p>
+            </div>
+            <div class="stat-item">
+              <h4>100% Offline</h4>
+              <p>Bảo mật trên máy</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <img src="ImagesIntro/iphoneDuo/Screenshot%20iPhone%20Duo%2005-11-2026%20at%2015.24.02.png" alt="Giao diện trực quan ứng dụng Vị Trí Lô Đất">
+            <div class="floating-tag tag-top-left">
+              <span>📍</span> Định vị vệ tinh siêu chuẩn
+            </div>
+            <div class="floating-tag tag-bottom-right">
+              <span>⚡️</span> Nhận diện OCR tức thì
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES MATRIX ================= -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Đột Phá Công Nghệ</span>
+        <h2 class="section-title">Mọi Công Cụ Đo Đạc Địa Chính Trong Tầm Tay</h2>
+        <p class="section-desc">
+          Được thiết kế chuyên biệt cho kỹ sư trắc địa, nhà đầu tư, chuyên viên tư vấn bất động sản và người sở hữu đất cần kiểm tra ranh giới thực tế nhanh chóng.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">📸</div>
+          <h3>Quét Sổ Đỏ Bằng Camera OCR</h3>
+          <p>
+            Tự động nhận dạng thông minh bảng toạ độ góc ranh (X, Y) trực tiếp từ camera hoặc thư viện ảnh sổ đỏ/sổ hồng. Tiết kiệm 95% thời gian gõ số thủ công.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">🗺️</div>
+          <h3>Hiển Thị Đa Giác Ranh Giới Vệ Tinh</h3>
+          <p>
+            Tự động nối các điểm mốc thành thửa đất khép kín trực quan trên nền bản đồ vệ tinh Apple Maps / Google Maps độ phân giải cực cao.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">📐</div>
+          <h3>Tính Diện Tích & Kích Thước Từng Cạnh</h3>
+          <p>
+            Tự động tính chu vi, diện tích thửa đất chuẩn $m^2$ cùng bảng quy đổi đa năng theo tập quán các vùng miền: Sào Bắc Bộ, Sào Trung Bộ, Công Nam Bộ và Hecta.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">🧭</div>
+          <h3>Quy Chuẩn Toạ Độ VN-2000 Chuẩn Xác</h3>
+          <p>
+            Tích hợp đầy đủ thông số kinh tuyến trục và elipsoid WGS-84/VN-2000 của toàn bộ 63 tỉnh thành phố. Hỗ trợ đầy đủ cả múi chiếu 3° (địa chính) và múi chiếu 6° (quy hoạch).
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">🚗</div>
+          <h3>Dẫn Đường Thực Địa Đến Từng Mốc</h3>
+          <p>
+            1 chạm mở điều hướng GPS chỉ đường lái xe hoặc đi bộ trực tiếp tới từng góc ranh thửa đất, giúp việc kiểm tra đất thực địa trở nên dễ dàng và chuẩn xác.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">📄</div>
+          <h3>Xuất Báo Cáo Sơ Đồ Kỹ Thuật Cao</h3>
+          <p>
+            Xuất file hình ảnh/báo cáo trích đo chi tiết có kèm bảng toạ độ, diện tích và chiều dài từng cạnh để gửi qua Zalo, Mail, phục vụ trao đổi và lưu trữ hồ sơ.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SCREENSHOTS GALLERY ================= -->
+  <section id="screenshots" class="screenshots-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Hình Ảnh Giao Diện Thực Tế</span>
+        <h2 class="section-title">Trải Nghiệm Đỉnh Cao Trên iPhone & iPad</h2>
+        <p class="section-desc">
+          Bấm vào bất kỳ ảnh nào để phóng to xem chi tiết các tính năng tra cứu toạ độ, vẽ ranh giới và phân tích thửa đất.
+        </p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="gallery-tabs">
+        <button class="tab-btn active" data-target="pane-duo">Bản Giới Thiệu (Duo Preview)</button>
+        <button class="tab-btn" data-target="pane-iphone">iPhone 18 Pro (Chi Tiết)</button>
+        <button class="tab-btn" data-target="pane-ipad">iPad Pro (Màn Hình Lớn)</button>
+      </div>
+
+      <!-- Pane 1: iPhone Duo Promo -->
+      <div id="pane-duo" class="gallery-pane active">
+        <div class="screen-card">
+          <div class="screen-img-box">
+            <img src="ImagesIntro/iphoneDuo/Screenshot%20iPhone%20Duo%2005-11-2026%20at%2015.23.22.png" alt="Nhập liệu toạ độ & Quét sổ đỏ">
+          </div>
+          <div class="screen-info">
+            <span class="screen-tag">Nhập liệu đa năng</span>
+            <h4>Quét OCR & Nhập Toạ Độ Sổ Đỏ</h4>
+            <p>Hỗ trợ quét ảnh tự động, dán nhanh cả bảng toạ độ từ Excel hoặc nhập thủ công từng mốc.</p>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <div class="screen-img-box">
+            <img src="ImagesIntro/iphoneDuo/Screenshot%20iPhone%20Duo%2005-11-2026%20at%2015.24.02.png" alt="Bản đồ ranh giới thửa đất">
+          </div>
+          <div class="screen-info">
+            <span class="screen-tag">Định vị trực quan</span>
+            <h4>Bản Đồ Đa Giác & Đo Chiều Dài Cạnh</h4>
+            <p>Hiển thị số thứ tự mốc, chiều dài từng cạnh ranh và tổng diện tích khu đất rõ ràng.</p>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <div class="screen-img-box">
+            <img src="ImagesIntro/iphoneDuo/Screenshot%20iPhone%20Duo%2005-11-2026%20at%2015.24.45.png" alt="Phân tích chi tiết và xuất báo cáo">
+          </div>
+          <div class="screen-info">
+            <span class="screen-tag">Báo cáo chuyên nghiệp</span>
+            <h4>Chi Tiết Toạ Độ & Xuất Sơ Đồ</h4>
+            <p>Bảng phân tích góc ranh, chuyển đổi WGS-84, tính năng sao chép và xuất file ảnh sơ đồ chất lượng cao.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pane 2: iPhone Pro Native -->
+      <div id="pane-iphone" class="gallery-pane">
+        <div class="screen-card">
+          <div class="screen-img-box">
+            <img src="ImagesIntro/iphone8/Screenshot%20iPhone%2018%20Pro%2005-11-2026%20at%2015.16.33.png" alt="Giao diện màn hình chính iPhone Pro">
+          </div>
+          <div class="screen-info">
+            <span class="screen-tag">Màn hình chính</span>
+            <h4>Bảng Toạ Độ & Chọn Tỉnh Thành</h4>
+            <p>Dễ dàng chọn hệ quy chiếu của từng tỉnh, cấu hình độ chính xác 2 chữ số hoặc 3 chữ số thập phân.</p>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <div class="screen-img-box">
+            <img src="ImagesIntro/iphone8/Screenshot%20iPhone%2018%20Pro%2005-11-2026%20at%2015.17.11.png" alt="Màn hình xem chi tiết bản đồ iPhone Pro">
+          </div>
+          <div class="screen-info">
+            <span class="screen-tag">Chế độ xem bản đồ</span>
+            <h4>Bản Đồ Vệ Tinh Đầy Đủ Chi Tiết</h4>
+            <p>Tương thích mượt mà với cảm ứng đa điểm, phóng to thu nhỏ, xem toạ độ GPS tâm thửa đất.</p>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <div class="screen-img-box">
+            <img src="ImagesIntro/iphone8/Screenshot%20iPhone%2018%20Pro%2005-11-2026%20at%2015.18.19.png" alt="Màn hình phân tích góc cạnh iPhone Pro">
+          </div>
+          <div class="screen-info">
+            <span class="screen-tag">Phân tích kỹ thuật</span>
+            <h4>Thông Số Kỹ Thuật & Chỉ Đường</h4>
+            <p>Bảng chi tiết khoảng cách mốc 1-2, 2-3... kèm nút chuyển tiếp tới bản đồ chỉ đường Google/Apple Maps.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pane 3: iPad Pro Native -->
+      <div id="pane-ipad" class="gallery-pane">
+        <div class="screen-card">
+          <div class="screen-img-box">
+            <img src="ImagesIntro/ipad/IMG_6327.PNG" alt="Giao diện iPad màn hình rộng">
+          </div>
+          <div class="screen-info">
+            <span class="screen-tag">iPadOS Tối Ưu</span>
+            <h4>Bảng Điều Khiển Màn Hình Lớn</h4>
+            <p>Tận dụng không gian rộng rãi của iPad để quản lý danh sách toạ độ dài và đối soát sổ đỏ thuận tiện.</p>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <div class="screen-img-box">
+            <img src="ImagesIntro/ipad/IMG_6328.PNG" alt="Bản đồ thửa đất toàn cảnh iPad">
+          </div>
+          <div class="screen-info">
+            <span class="screen-tag">Bản đồ bao quát</span>
+            <h4>Toàn Cảnh Quy Hoạch Vùng Đất</h4>
+            <p>Hiển thị thửa đất rõ ràng trong bối cảnh hạ tầng giao thông và khu dân cư lân cận.</p>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <div class="screen-img-box">
+            <img src="ImagesIntro/ipad/IMG_6329.PNG" alt="Báo cáo phân tích chuyên sâu iPad">
+          </div>
+          <div class="screen-info">
+            <span class="screen-tag">Trắc địa chuyên nghiệp</span>
+            <h4>Báo Cáo Phân Tích Hình Thể Thửa Đất</h4>
+            <p>Hỗ trợ đầy đủ các tuỳ chọn xuất tài liệu báo cáo và chia sẻ dữ liệu toạ độ WGS-84 đồng bộ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECHNICAL STANDARDS ================= -->
+  <section id="standards">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Cơ Sở Khoa Học & Pháp Lý</span>
+        <h2 class="section-title">Tiêu Chuẩn Hệ Toạ Độ Quốc Gia VN-2000</h2>
+        <p class="section-desc">
+          Toàn bộ thuật toán chuyển đổi toạ độ và tính toán trắc địa được xây dựng tuân thủ nghiêm ngặt theo các văn bản quy phạm pháp luật của Nhà nước.
+        </p>
+      </div>
+
+      <div class="standard-box">
+        <div class="standard-grid">
+          <div class="standard-col">
+            <h3>📜 Cơ Sở Pháp Lý & Tiêu Chuẩn</h3>
+            <ul class="standard-list">
+              <li><strong>Quyết định 973/2001/QĐ-TTg</strong> của Thủ tướng Chính phủ về ban hành và áp dụng Hệ quy chiếu và Hệ toạ độ quốc gia VN-2000.</li>
+              <li><strong>Thông tư 25/2014/TT-BTNMT</strong> của Bộ Tài nguyên và Môi trường quy định về bản đồ địa chính.</li>
+              <li>Sử dụng Ellipsoid WGS-84 quốc tế với bán trục lớn $a = 6378137.0m$, độ dẹt $\alpha = 1/298.257223563$.</li>
+              <li>Tham số 7 thông số Helmert tính toán chuyển đổi chính xác giữa VN-2000 và hệ toạ độ vệ tinh toàn cầu WGS-84.</li>
+            </ul>
+          </div>
+
+          <div class="standard-col">
+            <h3>💡 Kinh Nghiệm Sử Dụng Thực Tế</h3>
+            <ul class="standard-list">
+              <li><strong>Múi chiếu 3°:</strong> Sử dụng cho đo đạc bản đồ địa chính, cấp sổ đỏ, sổ hồng. Hệ số biến dạng tỷ lệ $k_0 = 0.9999$.</li>
+              <li><strong>Múi chiếu 6°:</strong> Sử dụng cho bản đồ quy hoạch, bản đồ địa hình cấp vùng. Hệ số $k_0 = 0.9996$.</li>
+              <li><strong>Phân biệt Trục X & Y:</strong> Trên sổ đỏ, trục X biểu thị toạ độ Bắc (Northing, 1-2 triệu mét), trục Y biểu thị toạ độ Đông (Easting, 400-700 ngàn mét). Ứng dụng hỗ trợ nút đảo chiều tức thì nếu bị nhầm lẫn.</li>
+              <li><strong>Kinh tuyến trục (KTT):</strong> Mỗi tỉnh thành có kinh tuyến trục riêng (VD: Hà Nội 105°00', TP.HCM 105°45'). Ứng dụng tích hợp sẵn 63 tỉnh giúp bạn định vị chuẩn xác đến từng mét.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ SECTION ================= -->
+  <section id="faq" style="background: #f8fafc;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Giải Đáp Thắc Mắc</span>
+        <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+        <p class="section-desc">Những câu hỏi người dùng hay quan tâm nhất khi sử dụng ứng dụng Vị Trí Lô Đất.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Ứng dụng có hoạt động khi không có kết nối Internet không?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              <strong>Có!</strong> Toàn bộ thuật toán chuyển đổi toạ độ VN-2000 sang WGS-84, tính diện tích, đo chu vi và công nghệ nhận diện OCR camera hoạt động hoàn toàn Offline ngay trên thiết bị. Kết nối mạng chỉ cần thiết khi bạn tải dữ liệu bản đồ nền vệ tinh mới.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Làm thế nào để quét ảnh sổ đỏ bằng Camera đạt kết quả chính xác nhất?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Bạn nên giữ máy song song và vuông góc với bảng toạ độ góc ranh trên sổ đỏ, chụp ở nơi có đủ ánh sáng và tránh bị bóng mờ che khuất các con số. Sau khi quét xong, bạn có thể kiểm tra lại nhanh và chỉnh sửa từng chữ số nếu cần thiết.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Dữ liệu thửa đất và ảnh sổ đỏ của tôi có bị gửi lên máy chủ không?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              <strong>Tuyệt đối không!</strong> Chúng tôi tôn trọng quyền riêng tư tối đa. Toàn bộ hình ảnh, toạ độ góc ranh và lịch sử tra cứu của bạn được xử lý và lưu trữ cục bộ 100% trong bộ nhớ an toàn của thiết bị (On-Device Storage). Không có bất kỳ dữ liệu sổ đỏ nào bị tải lên máy chủ ngoài.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Kết quả định vị trên ứng dụng có thay thế trích lục địa chính được không?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Ứng dụng nhằm mục đích hỗ trợ tra cứu nhanh, kiểm tra vị trí thực địa và phục vụ sơ bộ cho công tác khảo sát, giao dịch. Trong mọi thủ tục pháp lý, chuyển nhượng hoặc giải quyết tranh chấp đất đai, bạn cần căn cứ vào văn bản trích lục đo đạc chính thức có đóng dấu thẩm quyền từ Chi nhánh Văn phòng Đăng ký Đất đai.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CALL TO ACTION ================= -->
+  <section id="download" style="padding-bottom: 90px;">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Sẵn Sàng Định Vị Thửa Đất Của Bạn?</h2>
+        <p>
+          Tải ngay ứng dụng Vị Trí Lô Đất trên iPhone và iPad để trải nghiệm công cụ tra cứu toạ độ, quét sổ đỏ và vẽ ranh giới thông minh nhất hiện nay.
+        </p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.1rem;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.36-.58.67-1.09 1.74-.95 2.77 1 .08 2.05-.53 2.68-1.28z"/>
+            </svg>
+            Tải Ngay Trên Apple App Store
+          </a>
+          <a href="mailto:support@binhmmo.com" class="btn btn-secondary" style="padding: 14px 28px; background: transparent; color: #ffffff !important; border-color: rgba(255,255,255,0.3);">
+            Liên Hệ Đội Ngũ Phát Triển
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <img src="ImagesIntro/app-icon.png" alt="Icon Vị Trí Lô Đất" style="width: 36px; height: 36px; border-radius: 8px;">
+            <h4 style="margin: 0;">Vị Trí Lô Đất</h4>
+          </div>
+          <p>
+            Ứng dụng hỗ trợ tra cứu toạ độ VN-2000, kiểm tra ranh giới thửa đất, quét camera OCR sổ đỏ và xuất bản vẽ đo đạc trên iOS & iPadOS.
+          </p>
+          <p style="margin-top: 12px; font-size: 0.85rem; color: #64748b;">
+            Phát triển bởi <strong>Binhmmo Team</strong>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Ứng Dụng</h5>
+          <ul>
+            <li><a href="#features">Tính Năng Chính</a></li>
+            <li><a href="#screenshots">Thư Viện Hình Ảnh</a></li>
+            <li><a href="#standards">Tiêu Chuẩn VN-2000</a></li>
+            <li><a href="#download">Tải Về Ứng Dụng</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Pháp Lý & Điều Khoản</h5>
+          <ul>
+            <li><a href="terms.html">Điều Khoản Sử Dụng (Terms)</a></li>
+            <li><a href="privacy.html">Chính Sách Bảo Mật (Privacy)</a></li>
+            <li><a href="terms.html#disclaimer">Miễn Trừ Trách Nhiệm</a></li>
+            <li><a href="privacy.html#permissions">Quyền Truy Cập Camera</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Hỗ Trợ & Liên Hệ</h5>
+          <ul>
+            <li><a href="mailto:support@binhmmo.com">Email: support@binhmmo.com</a></li>
+            <li><a href="#faq">Câu Hỏi Thường Gặp</a></li>
+            <li><a href="mailto:support@binhmmo.com?subject=Góp%20ý%20ứng%20dụng%20Vị%20Trí%20Lô%20Đất">Đóng Góp Ý Kiến</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Vị Trí Lô Đất. Bảo lưu mọi quyền (All Rights Reserved).
+        </div>
+        <div class="footer-bottom-links">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="#download">App Store</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Đóng">&times;</button>
+      <img id="lightboxImg" class="lightbox-img" src="" alt="Screenshot Vị Trí Lô Đất">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
