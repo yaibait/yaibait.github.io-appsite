@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh Vần Tiếng Anh Pro - Pháp Lý & Hỗ Trợ</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-main: #1C1C1E;
+            --text-secondary: #636366;
+            --bg-page: #F2F2F7;
+            --bg-card: #FFFFFF;
+            --border-color: #E5E5EA;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #0A84FF;
+                --text-main: #F2F2F7;
+                --text-secondary: #8E8E93;
+                --bg-page: #000000;
+                --bg-card: #1C1C1E;
+                --border-color: #2C2C2E;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 24px 16px;
+        }
+
+        .card {
+            max-width: 520px;
+            width: 100%;
+            background-color: var(--bg-card);
+            border-radius: 24px;
+            padding: 40px 32px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+        }
+
+        .icon {
+            width: 88px;
+            height: 88px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 16px rgba(0, 122, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        p.subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 122, 255, 0.07);
+            color: var(--primary-color);
+            padding: 16px 20px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-link:hover {
+            background-color: rgba(0, 122, 255, 0.14);
+            transform: translateY(-1px);
+        }
+
+        .btn-link span.arrow {
+            font-size: 18px;
+        }
+
+        .footer {
+            margin-top: 32px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="icon" src=".AppIcon-1024.png" alt="App Icon" onerror="this.style.display='none'">
+        <h1>Đánh Vần Tiếng Anh Pro</h1>
+        <p class="subtitle">Trung tâm chính sách pháp lý &amp; hỗ trợ ứng dụng</p>
+
+        <div class="links-group">
+            <a class="btn-link" href="privacy.html">
+                <span>Chính Sách Bảo Mật (Privacy Policy)</span>
+                <span class="arrow">&rarr;</span>
+            </a>
+            <a class="btn-link" href="terms.html">
+                <span>Điều Khoản Dịch Vụ (Terms of Service)</span>
+                <span class="arrow">&rarr;</span>
+            </a>
+            <a class="btn-link" href="mailto:support@binhmmo.com">
+                <span>Liên Hệ Hỗ Trợ (Support)</span>
+                <span class="arrow">&rarr;</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Đánh Vần Tiếng Anh Pro. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
